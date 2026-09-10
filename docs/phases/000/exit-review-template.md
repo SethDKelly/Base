@@ -1,174 +1,90 @@
 ---
 type: Phase Exit Review Template
 title: Phase 000 Consolidation, Exit Review & Phase 001 Handoff Template
-description: Phase-specific completion and handoff criteria for determining whether project intake is sufficient to begin Jackson-aligned purpose and need framing.
-tags: [phase-000, exit-review, handoff, phase-001, template]
+description: Phase-specific completion and handoff criteria for determining whether project intake and its knowledge corpus are ready for Jackson-aligned purpose and need framing.
+tags: [phase-000, exit-review, handoff, phase-001, template, documentation]
 ---
 
 # Phase 000 Consolidation, Exit Review & Phase 001 Handoff Template
 
 ## Purpose
 
-The final project-specific Phase 000 subphase uses this template to determine whether intake has done enough to support Phase 001 without carrying hidden context, false certainty, or premature solution structure forward.
+The final project-specific Phase 000 subphase uses this template to determine whether intake has done enough to support Phase 001 without carrying hidden context, false certainty, premature solution structure, or documentation drift forward.
 
-This is a Phase-000-specific specialization of the repository-wide [Phase Lifecycle Contract](../../methodology/phase-lifecycle.md).
+This specializes the repository-wide [Phase Lifecycle Contract](../../methodology/phase-lifecycle.md) and [Documentation Integrity & OKF Governance Contract](../../methodology/documentation-governance.md).
 
-The final subphase letter is determined by the project's `000-A` decomposition. This file is therefore a reusable exit-review template, not a predetermined `000-X` phase record.
+The final subphase letter is determined by the project's `000-A` decomposition; this file is a reusable template, not a predetermined phase record.
 
 ## Review inputs
 
-Review at least:
-
-- the approved `000-A` subphase plan;
-- all completed Phase 000 subphase records;
-- current canonical intake knowledge;
-- unresolved questions and assumptions;
-- material evidence and conflicts;
-- any solution proposals recorded during intake;
-- the Phase 001 high-level definition.
+Review the approved `000-A` plan, completed Phase 000 records, current canonical intake knowledge, unresolved questions/assumptions, material evidence/conflicts, solution proposals recorded during intake, affected indexes/references, and the [Phase 001 definition](../001/phase-definition.md).
 
 ## 1. Planned-work disposition
 
-Confirm that every subphase planned by `000-A` is one of:
-
-- completed;
-- superseded by a documented refinement;
-- explicitly removed because it became unnecessary;
-- still incomplete and therefore blocking exit.
-
-Document existence alone is not completion evidence.
+Confirm every planned workstream is completed, superseded by a documented refinement, explicitly removed because it became unnecessary, or still incomplete and blocking. Document existence is not completion evidence.
 
 ## 2. Intake coverage review
 
-Assess every required intake dimension from the [Phase 000 Intake Knowledge & Evidence Contract](intake-knowledge-contract.md).
+For every required intake dimension record **Established**, **Established with uncertainty**, **Not applicable with rationale**, **Incomplete — carry-forward**, or **Incomplete — blocking**.
 
-For each dimension, record one of:
-
-- **Established** — sufficiently understood for Phase 001;
-- **Established with uncertainty** — useful current understanding exists and uncertainty is explicit;
-- **Not applicable** — genuinely irrelevant, with rationale;
-- **Incomplete — carry-forward** — unresolved but does not prevent purpose/need analysis;
-- **Incomplete — blocking** — Phase 001 would be distorted by proceeding.
-
-Required dimensions are:
-
-- contemplated product/application definition;
-- problem or opportunity context;
-- actors, stakeholders, and materially affected parties;
-- desired outcomes or changes sought;
-- scope boundaries and non-goals;
-- domain terminology and contextual distinctions;
-- known external constraints;
-- assumptions and hypotheses;
-- open questions and uncertainty;
-- evidence/source posture;
-- legacy/current-state context when applicable.
+Review product/application definition, problem/opportunity context, actors/stakeholders/affected parties, desired outcomes, scope/non-goals, terminology/context, external constraints, assumptions/hypotheses, open questions/uncertainty, evidence/source posture, and legacy/current-state context where applicable.
 
 ## 3. Evidence and uncertainty audit
 
-Confirm that material statements can be distinguished as appropriate among:
+Confirm material statements remain distinguishable as observations, source assertions, external constraints, assumptions, hypotheses, open questions, solution proposals, or intake decisions.
 
-- evidence-backed observations;
-- stakeholder/source assertions;
-- external constraints;
-- assumptions;
-- hypotheses;
-- open questions;
-- proposals/solution ideas;
-- intake decisions.
-
-Check specifically for:
-
-- claims presented as fact without adequate basis;
-- stale or weak evidence being treated as current authority;
-- unresolved source conflicts hidden by summary prose;
-- assumptions that became requirements merely through repetition;
-- high-consequence uncertainty that lacks an explicit disposition.
+Check for unsupported facts, stale/weak evidence treated as current authority, hidden source conflicts, assumptions promoted through repetition, and high-consequence uncertainty without an explicit disposition.
 
 ## 4. Legacy and inherited-structure audit
 
-If an existing product, repository, workflow, or system was studied, verify that Phase 000 did not accidentally preserve its decomposition as future design authority.
+If an existing product, repository, workflow, or system was studied, verify Phase 000 did not preserve its decomposition as future design authority.
 
-Record any inherited behavior that remains ambiguous between:
-
-- genuine domain/user need;
-- external constraint;
-- historical policy;
-- implementation artifact;
-- accidental behavior;
-- unknown rationale.
-
-A material ambiguity that would predetermine concept design should block exit or be explicitly carried to the earliest phase capable of resolving it.
+Material ambiguity between genuine need, external constraint, historical policy, implementation artifact, accidental behavior, adaptation to old limitations, or unknown rationale should block exit or have an explicit earliest appropriate destination.
 
 ## 5. Premature-solution audit
 
-Search Phase 000 conclusions for solution lock-in.
+Challenge conclusions presuming final concepts, features, workflows, UI structures, data models, services/modules, APIs, technical architecture, infrastructure, or implementation sequencing.
 
-Challenge statements that presume:
+A solution idea may remain labeled evidence or proposal; it must not enter Phase 001 as unquestioned design truth.
 
-- final software concepts;
-- final feature decomposition;
-- fixed workflows;
-- UI structures;
-- data models or schemas;
-- services or modules;
-- API boundaries;
-- technical architecture;
-- infrastructure or framework choices;
-- implementation sequencing.
+## 6. Canonical authority and documentation integrity audit
 
-A solution idea may remain as labeled evidence or a proposal. It must not enter Phase 001 as unquestioned design truth.
-
-## 6. Canonical authority review
-
-Confirm that durable current intake conclusions have canonical homes and that phase records are not being used as the only current source of truth.
+Apply the [Documentation Integrity & OKF Governance Contract](../../methodology/documentation-governance.md).
 
 Verify that:
 
-- canonical knowledge reflects the best current intake understanding;
-- known superseded statements are not still presented as current;
+- durable intake conclusions have natural canonical owners;
+- phase records are not the only current source of truth;
 - assumptions and open questions remain visibly provisional;
-- evidence/rationale can be reached from canonical knowledge where useful;
-- canonical intake material remains concise enough for progressive disclosure.
+- known superseded current statements have been corrected or lifecycle-managed;
+- avoidable duplicate current statements have been consolidated;
+- affected `index.md` files expose current knowledge through progressive disclosure without duplicating it;
+- important internal links resolve and point to intended authority;
+- new concept documents are discoverable through indexes and/or meaningful graph links;
+- ordinary concept documents use valid OKF frontmatter;
+- reserved `index.md` files remain navigational and conform to the adopted OKF structure;
+- terminology is coherent in the corpus scope touched by Phase 000;
+- provenance is represented through links and/or `sources` where materially useful rather than copied narrative.
+
+Documentation incoherence that would mislead Phase 001 is a phase-exit defect.
 
 ## 7. Phase 001 readiness test
 
-Ask whether a competent reader can begin **Phase 001 — Purpose, Context, Need & Success Framing** using repository knowledge alone.
+A competent reader must be able to begin **Phase 001 — Purpose, Context, Need & Success Framing** using repository knowledge alone.
 
-The answer should be yes to all of the following:
+The answer should be yes to these questions: Is the contemplated product understandable? Is the motivating context clear enough to investigate purposes? Are relevant affected parties visible? Are desired outcomes recorded without assuming a solution? Are scope, terminology, and material constraints understandable? Can the reader distinguish what is known, asserted, assumed, hypothesized, proposed, and unresolved? Can Phase 001 revisit intake framing? Has Phase 000 avoided preselecting the concept solution?
 
-- Is the contemplated product/application understandable?
-- Is the motivating context sufficiently clear to investigate purposes and needs?
-- Are relevant actors and affected parties visible enough to avoid obvious stakeholder omission?
-- Are desired outcomes recorded without assuming the final solution?
-- Are scope and non-goals clear enough to constrain Phase 001 inquiry?
-- Are material domain terms and external constraints understandable?
-- Can the reader tell what is known, asserted, assumed, hypothesized, proposed, and unresolved?
-- Can Phase 001 revisit intake framing if purpose analysis exposes a flaw?
-- Has Phase 000 avoided preselecting the concept solution?
-
-If any material answer is no, Phase 000 should not exit.
+If a material answer is no, Phase 000 should not exit.
 
 ## 8. Carry-forward discipline
 
-A Phase 000 issue may be carried forward only when:
+An issue may be carried forward only when it does not undermine basic project intelligibility; Phase 001 can proceed without pretending it is resolved; uncertainty remains explicit; and its design destination/reconsideration trigger plus canonical knowledge destination are identified where relevant.
 
-- it does not undermine the basic intelligibility of the project;
-- purpose/need discovery can proceed without pretending the issue is resolved;
-- its uncertainty is explicit;
-- its destination or reconsideration trigger is identified.
-
-Typical destinations may include:
-
-- Phase 001 for purpose/need clarification;
-- Phase 002 for candidate concept exploration;
-- a later concept-design phase when the issue genuinely cannot be resolved earlier.
-
-Do not use carry-forward to bypass missing foundational intake.
+Do not use carry-forward to bypass missing foundational intake or documentation authority problems.
 
 ## 9. Exit decision
 
-Use the repository-wide outcomes:
+Use:
 
 ### PASS
 
@@ -176,34 +92,32 @@ Phase 000 fulfills its intake purpose and Phase 001 may begin.
 
 ### PASS WITH CARRY-FORWARD
 
-Phase 000 fulfills its intake purpose, while explicitly identified non-blocking uncertainties continue with named destinations or triggers.
+Phase 000 fulfills its purpose while explicitly identified non-blocking uncertainties continue with named destinations or triggers.
 
 ### NOT READY TO EXIT
 
-Material intake gaps, evidence conflicts, hidden assumptions, or premature solution commitments would make Phase 001 unreliable. Define additional Phase 000 work before closing.
+Material intake, evidence, hidden-assumption, solution-lock, canonical-authority, or documentation-coherence gaps require additional Phase 000 work.
 
-## 10. Required Phase 001 handoff
+## Required Phase 001 handoff
 
-A successful exit must record:
+A successful exit records:
 
 - concise current project/product definition;
-- motivating problem/opportunity context;
-- relevant actor/stakeholder/affected-party context;
+- motivating context;
+- relevant affected-party context;
 - desired outcomes/change sought;
 - scope and non-goals;
-- material terminology;
-- external constraints;
-- assumptions and hypotheses still active;
+- material terminology and constraints;
+- active assumptions/hypotheses;
 - unresolved questions and carry-forwards;
 - important evidence conflicts or interpretation cautions;
-- quarantined solution proposals that Phase 001 must not treat as authority;
-- canonical documents that constitute the intake baseline;
-- confirmation that Phase 001 may revisit intake conclusions when warranted;
+- quarantined solution proposals Phase 001 must not treat as authority;
+- canonical documents and indexes constituting the intake baseline;
+- material reference/provenance relationships the next phase should follow;
+- confirmation that Phase 001 may revisit intake conclusions;
 - implementation readiness state.
 
 ## Implementation state at Phase 000 exit
-
-Even after a successful Phase 000 exit:
 
 - **Readiness:** not ready
 - **Execution:** not started
