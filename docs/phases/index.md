@@ -45,7 +45,9 @@ The phase definitions below establish high-level methodological obligations. The
 
 The complete high-level lifecycle has been reviewed and adopted.
 
-The next Base-template activity is to refine each phase definition and its start-gate guidance in dependency order so that future cloned repositories have strong instructions for planning and executing that phase. This refinement must preserve dynamic project-specific subphase derivation rather than turning Base into a fixed checklist of predetermined B–X documents.
+**Phase 000 is refined for template use.** Its definition now includes a required semantic intake-coverage contract, evidence and uncertainty discipline, explicit separation from Phase 001 purpose analysis, a strengthened `000-A` dynamic planning gate, and a reusable Phase 000 exit-review/Phase 001 handoff template.
+
+Phases `001–011` remain high-level adopted definitions pending dependency-order refinement. Refinement must preserve dynamic project-specific subphase derivation rather than turning Base into a fixed checklist of predetermined B–X documents.
 
 ## Implementation invariant
 
