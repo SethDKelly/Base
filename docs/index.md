@@ -1,53 +1,38 @@
 ---
-type: Knowledge Bundle Index
-title: Base Design Knowledge
 okf_version: "0.2"
-description: Canonical design knowledge and phase records for a design-only, Jackson-aligned software concept design lifecycle.
-tags: [design, concept-design, okf, template]
 ---
 
 # Base Design Knowledge
 
-This directory is the Open Knowledge Format (OKF) v0.2 knowledge bundle for the repository.
+This directory is the Open Knowledge Format (OKF) v0.2 knowledge bundle for Base. It guides a cloned project from project intake through completed Jackson-aligned software concept design without beginning application implementation.
 
-The bundle exists to guide a cloned project from initial intake through complete software concept design without beginning application implementation.
+## Start here
 
-## Read first
+- [Methodology](methodology/) — design authority, lifecycle, documentation governance, knowledge authority, and design-only guardrails.
+- [Design phases](phases/) — Phase 000 intake followed by Phases 001–011 of the Base Jackson-aligned lifecycle.
+- [Canonical knowledge](canonical/) — the compact current design truth produced by a cloned project.
 
-- [Methodology authority](methodology/authority.md) — what governs the design process and what this template does not claim.
-- [Jackson-aligned concept-design lifecycle](methodology/concept-design-lifecycle.md) — the adopted high-level sequence from Phase 000 through Phase 011.
-- [Design-only guardrails](methodology/design-only-guardrails.md) — the implementation prohibition and readiness states.
-- [Phase lifecycle](methodology/phase-lifecycle.md) — how every high-level phase starts, is subdivided, exits, and hands off.
-- [Knowledge authority model](methodology/knowledge-authority.md) — how canonical current truth is separated from historical phase evidence.
-- [Design phases](phases/index.md) — the complete high-level phase catalog and refinement status.
-- [Phase 000](phases/000/index.md) — project intake and product-definition entry point for a cloned repository.
+## Governing contracts
 
-## Knowledge topology
+- [Concept Design Methodology Authority](methodology/authority.md) — methodological authority and interpretation rules.
+- [Jackson-Aligned Concept Design Lifecycle](methodology/concept-design-lifecycle.md) — reviewed high-level lifecycle.
+- [Phase Lifecycle Contract](methodology/phase-lifecycle.md) — mandatory start gate, dynamic subphase derivation, exit review, and handoff.
+- [Documentation Integrity & OKF Governance Contract](methodology/documentation-governance.md) — corpus coherence, indexability, cross-linking, anti-duplication, and drift control.
+- [Canonical and Historical Knowledge Authority](methodology/knowledge-authority.md) — current truth versus phase evidence.
+- [Design-Only Guardrails](methodology/design-only-guardrails.md) — implementation prohibition and readiness states.
 
-### Canonical knowledge
+## Knowledge model
 
-Durable design truth belongs under [`canonical/`](canonical/index.md). This is where a cloned project records the current authoritative understanding of its purposes, concepts, invariants, synchronizations, design principles, decisions, and other stable design knowledge.
+Durable current design meaning belongs under [canonical knowledge](canonical/). Chronological discovery, alternatives, reviews, and handoffs belong under [phase records](phases/). Phase records are evidence, not automatically current truth.
 
-### Phase records
-
-Chronological discovery and review work belongs under [`phases/`](phases/index.md). These records explain how decisions were reached, what alternatives were considered, what evidence was reviewed, and why a phase was allowed to hand off.
-
-Phase records are evidence, not automatically current truth.
-
-## Adopted high-level lifecycle
-
-The Base lifecycle is:
-
-`000 Project Intake` → `001 Purpose` → `002 Concept Discovery` → `003 Concept Specification` → `004 Modularity & Boundary` → `005 Composition & Synchronization` → `006 Dependence & Scope` → `007 Mapping` → `008 Familiarity & Reuse` → `009 Integrity` → `010 Misfit & Adversarial Validation` → `011 Methodology Closure`.
-
-These phases are methodological obligations, not fixed quantities of work. Each phase begins by deriving the dependency-safe substantive subphases required by the actual project.
+Documents should link to existing authoritative knowledge rather than restating it. Directory indexes provide progressive disclosure; ordinary concept documents carry OKF frontmatter and form a traversable graph through standard Markdown links.
 
 ## Lifecycle invariant
 
-Until the full design lifecycle is complete, implementation status remains:
+Until the full concept-design lifecycle is complete:
 
 - **Readiness:** not ready
 - **Execution:** not started
 - **Authorization:** not yet
 
-Final Phase 011 concept-design closure may change readiness to **ready** and authorize a downstream representation/architecture/implementation design process. It must not start application implementation itself.
+Successful Phase 011 closure may change readiness to **ready** while execution remains **not started**.
