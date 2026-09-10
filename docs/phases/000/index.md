@@ -1,8 +1,8 @@
 ---
 type: Phase Definition
 title: Phase 000 — Project Intake & Product Definition
-description: Pre-methodology intake phase that establishes the product, problem space, actors, intended outcomes, boundaries, constraints, and design mandate before Jackson-aligned concept design begins.
-tags: [phase-000, intake, product-definition, pre-methodology]
+description: Pre-methodology intake phase that establishes the project mandate, product context, affected parties, outcomes, boundaries, evidence posture, constraints, terminology, assumptions, and uncertainty before Jackson-aligned concept design begins.
+tags: [phase-000, intake, product-definition, pre-methodology, evidence]
 ---
 
 # Phase 000 — Project Intake & Product Definition
@@ -11,91 +11,196 @@ tags: [phase-000, intake, product-definition, pre-methodology]
 
 Phase 000 is a deliberate **pre-phase** to the Jackson-aligned concept-design lifecycle.
 
-Its job is not to discover or specify software concepts yet. Its job is to ensure that the project entering concept design is sufficiently understood to make purpose and concept discovery meaningful.
+Its job is to make the design problem sufficiently explicit, evidenced, and bounded that Phase 001 can investigate purpose, need, and success without depending on hidden conversational context or inheriting an already-selected solution.
+
+Phase 000 prepares the design problem. It does not solve it.
+
+It is specifically **not** a requirements-freeze phase, feature-definition phase, architecture phase, or concept-discovery phase.
 
 ## Methodological intention
 
-Establish a clear, evidence-aware definition of:
+Establish the best current, evidence-aware understanding of:
 
-- what product or application is being contemplated;
-- what problem space motivates it;
-- who the relevant actors, stakeholders, or affected parties are;
+- what product, application, service, or software-enabled capability is being contemplated;
+- what situation, problem, opportunity, burden, or change motivates the effort;
+- who sponsors, uses, operates, influences, constrains, or is materially affected by the contemplated product;
 - what outcomes or changes are sought;
-- what is explicitly in and out of scope;
-- what domain context or terminology must be understood before design begins;
+- what the current project boundary includes and excludes;
+- what domain context and terminology matter before design begins;
 - what external constraints are already known;
-- what uncertainties remain;
-- what assumptions must not silently become design facts.
+- what legacy/current-state behavior is relevant and why;
+- what evidence supports the current framing;
+- what is merely asserted, assumed, hypothesized, proposed, or unresolved;
+- what uncertainties Phase 001 and later design must inherit explicitly rather than unknowingly.
 
-Phase 000 must stop short of concept solutioning. It prepares the design problem; it does not solve it.
+Phase 000 must preserve uncertainty when certainty has not been earned.
+
+## Relationship to Phase 001
+
+Phase 000 may capture stated goals, desired outcomes, pains, opportunities, and stakeholder explanations for why the project matters.
+
+It must not prematurely perform the full Phase 001 purpose analysis or freeze a final purpose decomposition.
+
+The boundary is:
+
+- **Phase 000 asks:** What is the contemplated project, what context motivates it, who is affected, what change is being sought, what constrains the effort, and what do we currently know or not know?
+- **Phase 001 asks:** What human purposes, needs, contextual conditions, success criteria, tensions, and improvements should actually govern concept design?
+
+A successful Phase 000 handoff gives Phase 001 enough grounded context to challenge and refine the initial framing rather than simply accepting it.
+
+## Governing Phase 000 support contracts
+
+Phase 000 is further governed by:
+
+- [000-A — Phase Intent, Intake Scope, Evidence Posture & Subphase Planning](000-a-start-gate.md) — mandatory phase-specific planning gate;
+- [Phase 000 Intake Knowledge & Evidence Contract](intake-knowledge-contract.md) — statement classes, evidence posture, uncertainty treatment, required intake coverage, and anti-solutioning rules;
+- [Phase 000 Consolidation, Exit Review & Phase 001 Handoff Template](exit-review-template.md) — phase-specific closure and handoff test.
+
+These supporting documents define required semantic coverage without imposing a fixed number of project-specific substantive subphases.
 
 ## Typical inputs
 
 A cloned project may begin Phase 000 from any combination of:
 
-- a product idea;
-- business or organizational goals;
+- a product idea or opportunity;
+- business, organizational, public-interest, or operational goals;
 - user or stakeholder interviews;
 - an existing product description;
 - a problem statement;
 - domain documentation;
-- regulatory or policy constraints;
+- regulatory, legal, policy, contractual, or interoperability constraints;
 - prior system behavior being reconsidered;
-- observed pain points;
-- market or operational context;
+- observed pain points or operational burdens;
+- market or ecosystem context;
+- research, analytics, incidents, support history, or field observations;
+- an existing repository or legacy implementation;
+- proposed features or solution ideas;
 - explicit uncertainties or hypotheses.
 
-Inputs may be incomplete. Phase 000 exists partly to expose that incompleteness.
+Inputs may be incomplete, biased, stale, contradictory, or overly solution-specific. Phase 000 exists partly to expose those conditions.
+
+## Required intake coverage
+
+Every Phase 000 exit must establish or explicitly disposition the following knowledge dimensions:
+
+- contemplated product/application definition;
+- problem or opportunity context;
+- actors, stakeholders, and materially affected parties;
+- desired outcomes or changes sought;
+- scope boundaries and non-goals;
+- domain terminology and contextual distinctions;
+- known external constraints;
+- assumptions and hypotheses;
+- open questions and uncertainty;
+- evidence/source posture;
+- legacy/current-state context when applicable.
+
+This is a coverage contract, not a file or subphase taxonomy.
+
+`000-A` determines which dimensions are already adequate and which need project-specific work.
+
+## Evidence and epistemic discipline
+
+Material intake statements must remain distinguishable as appropriate among:
+
+- evidence-backed observations;
+- stakeholder/source assertions;
+- external constraints;
+- assumptions;
+- hypotheses;
+- open questions;
+- proposals or solution ideas;
+- intake decisions.
+
+Phase 000 must not promote repetition, confidence, seniority, or incumbent-system behavior into truth without adequate basis.
+
+See the [Intake Knowledge & Evidence Contract](intake-knowledge-contract.md) for the full classification and evidence rules.
 
 ## Expected durable outputs
 
-By exit, the project should have canonical current statements for the items that are sufficiently established, typically including:
+By exit, the repository should contain concise canonical current knowledge sufficient to answer, at an appropriate level:
 
-- product or application definition;
-- problem-space framing;
-- actor/stakeholder inventory;
-- desired outcomes;
-- scope boundaries;
-- known constraints;
-- key terminology;
-- assumptions and uncertainties;
-- explicit non-goals;
-- evidence/source notes where appropriate.
+- What is this project contemplating?
+- What context motivates it?
+- Who is affected or materially involved?
+- What outcomes or changes are sought?
+- What is currently in and out of scope?
+- What external constraints and domain distinctions matter?
+- What assumptions or hypotheses remain active?
+- What important questions remain unresolved?
+- What evidence or provenance materially qualifies the current framing?
 
-These outputs become inputs to the first Jackson-aligned design phase.
+Typical canonical intake knowledge may be grouped under a compact `canonical/project/` family, but Base does not require one file per topic or a fixed taxonomy.
+
+Detailed discovery evidence, alternatives, source conflicts, and historical reasoning remain in Phase 000 records.
+
+## Legacy/current-state neutrality
+
+Existing systems, repositories, workflows, documents, and product behavior may be studied during intake.
+
+They are evidence, not automatic design authority.
+
+Where relevant, distinguish among:
+
+- genuine domain or user need;
+- external constraint;
+- historical policy;
+- implementation limitation;
+- accidental behavior;
+- user adaptation to an old limitation;
+- behavior whose rationale is unknown.
+
+The future concept model must not be forced to mirror an incumbent system simply because its structure is available and concrete.
 
 ## Explicit exclusions
 
 Phase 000 must not:
 
-- define the final concept catalog;
+- define or freeze the final software concept catalog;
+- perform complete concept purpose decomposition;
 - specify concept state/actions as though concept discovery were complete;
-- select architecture;
-- choose frameworks, databases, infrastructure, or service topology;
-- design APIs or schemas for implementation;
-- create executable prototypes;
+- turn stakeholder roles into a final authorization model;
+- turn business objects into software concepts automatically;
+- treat proposed features as immutable requirements;
+- preserve current workflows merely because users know them;
+- select product architecture;
+- choose frameworks, databases, infrastructure, protocols, service topology, queues, or deployment models;
+- design implementation APIs or schemas;
+- create executable prototypes or application scaffolding;
+- write implementation tests;
+- establish implementation sequencing;
 - treat existing implementation structures as design authority merely because they already exist.
 
-Existing systems may be studied as evidence, but their implementation decomposition must not predetermine the concept model.
+A solution idea may be retained as a labeled proposal or hypothesis for later examination. It must not enter Phase 001 as unquestioned canonical design truth.
 
 ## Entry criteria
 
-At minimum, there must be a project idea, product/application proposal, or problem area worth defining.
+At minimum:
+
+- there is a project idea, product/application proposal, existing system reconsideration, or problem/opportunity area worth defining; and
+- there is enough starting context to perform `000-A` and define a responsible intake plan.
+
+If even the intake work cannot yet be identified, `000-A` should fail its start gate and record the missing precondition rather than inventing a phase structure.
 
 ## Exit criteria
 
-Phase 000 may exit when:
+Phase 000 may exit only when its final project-specific exit review establishes that:
 
-- the contemplated product/application is understandable without relying on hidden conversational context;
-- the problem space and desired outcomes are sufficiently framed for purpose discovery;
-- relevant actors and affected parties are identified to a useful degree;
-- scope and non-scope are explicit enough to prevent obvious drift;
-- material assumptions and uncertainties are visible;
-- known external constraints are recorded without prematurely translating them into implementation decisions;
-- current canonical intake knowledge has been updated;
+- the contemplated product/application is understandable without hidden conversational context;
+- the motivating problem/opportunity context is sufficiently explicit for Phase 001 purpose/need analysis;
+- relevant actors, stakeholders, and materially affected parties are identified to a useful degree;
+- desired outcomes are visible without predetermining the final solution;
+- scope and non-goals are explicit enough to constrain inquiry without freezing concept design;
+- material domain terminology and contextual distinctions are understandable;
+- known external constraints are recorded at the least solution-specific level that remains useful;
+- evidence-backed observations, assertions, assumptions, hypotheses, proposals, and open questions are distinguishable where material;
+- unresolved evidence conflicts and high-consequence uncertainties have explicit dispositions;
+- legacy/current-state evidence has not silently predetermined future concept structure;
+- durable intake conclusions have been promoted into canonical current knowledge;
+- current canonical intake knowledge does not knowingly contain superseded truth;
 - no concept solution has been prematurely frozen;
-- no implementation has begun;
-- the next high-level phase has adequate inputs for its own start gate.
+- no representation, architecture, or implementation work has begun;
+- Phase 001 can begin from repository knowledge alone and is explicitly free to revisit intake framing when deeper purpose analysis warrants it.
 
 ## Control structure
 
@@ -103,14 +208,26 @@ Phase 000 begins with:
 
 - [000-A — Phase Intent, Intake Scope, Evidence Posture & Subphase Planning](000-a-start-gate.md)
 
-The remaining substantive subphases are derived during `000-A` based on the project being cloned into the template.
+`000-A` performs a required intake-coverage assessment and derives only the substantive subphases the project actually needs.
 
-The final subphase must be a Phase 000 consolidation, exit review, and handoff.
+The final project-specific subphase must perform Phase 000 consolidation, exit review, and Phase 001 handoff using the [Phase 000 exit-review template](exit-review-template.md).
+
+The template does not prescribe the letters or count between those two control points.
+
+## Exit outcomes
+
+Use the repository-wide phase outcomes:
+
+- **PASS** — Phase 000 fulfills its intake purpose and Phase 001 may begin.
+- **PASS WITH CARRY-FORWARD** — Phase 000 fulfills its intake purpose while explicitly identified non-blocking uncertainties continue with named destinations or triggers.
+- **NOT READY TO EXIT** — material intake gaps, evidence conflicts, hidden assumptions, or solution lock-in require additional Phase 000 work.
 
 ## Implementation state
 
-Throughout Phase 000:
+Throughout Phase 000, including after a successful exit:
 
 - **Readiness:** not ready
 - **Execution:** not started
 - **Authorization:** not yet
+
+The only authorized handoff is into Phase 001 concept-design work.
