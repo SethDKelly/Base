@@ -1,219 +1,108 @@
 ---
 type: Phase Start Gate
 title: 000-A — Phase Intent, Intake Scope, Evidence Posture & Subphase Planning
-description: Mandatory start gate for tailoring Phase 000 to a cloned project's actual intake needs before substantive intake work begins.
-tags: [phase-000, start-gate, intake, planning, evidence]
+description: Mandatory start gate for tailoring Phase 000 to a cloned project's actual intake needs while planning canonical ownership, references, and documentation integrity.
+tags: [phase-000, start-gate, intake, planning, evidence, documentation]
 ---
 
 # 000-A — Phase Intent, Intake Scope, Evidence Posture & Subphase Planning
 
 ## Purpose
 
-This start gate determines how Phase 000 should be executed for the cloned project.
+This start gate determines how Phase 000 should be executed for the cloned project. It must be completed before substantive intake subphases are defined or performed.
 
-It must be completed before substantive intake subphases are defined or performed.
+The gate prevents a fixed checklist from replacing inquiry, prevents solution ideas or incumbent structures from hardening into design authority, and prevents the intake process from creating a duplicative or incoherent documentation corpus.
 
-The gate exists to prevent two common failures:
+`000-A` plans intake. It does not complete intake and does not begin Jackson concept discovery.
 
-1. forcing every project through a fixed document sequence regardless of context; and
-2. allowing an initially compelling solution idea, incumbent structure, or stakeholder assertion to harden into design authority before the project is adequately understood.
+## Governing contracts
 
-`000-A` plans intake. It does not itself complete intake and does not begin Jackson concept discovery.
+Review before planning:
 
-## Governing Phase 000 contracts
-
-Before planning the phase, review:
-
-- [Phase 000 — Project Intake & Product Definition](index.md);
+- [Phase 000 definition](phase-definition.md);
 - [Phase 000 Intake Knowledge & Evidence Contract](intake-knowledge-contract.md);
-- [Phase 000 Consolidation, Exit Review & Phase 001 Handoff Template](exit-review-template.md);
-- the repository-wide [Phase Lifecycle Contract](../../methodology/phase-lifecycle.md);
-- the [Canonical and Historical Knowledge Authority](../../methodology/knowledge-authority.md).
+- [Phase 000 exit-review template](exit-review-template.md);
+- [Phase Lifecycle Contract](../../methodology/phase-lifecycle.md);
+- [Documentation Integrity & OKF Governance Contract](../../methodology/documentation-governance.md);
+- [Canonical and Historical Knowledge Authority](../../methodology/knowledge-authority.md).
 
 ## 1. Restate the contemplated project neutrally
 
-Capture the starting point without converting it into a solution model:
+Capture what is being contemplated, what prompted it, what is believed to need improvement or support, who supplied the framing, and which statements are observations, assertions, constraints, assumptions, hypotheses, questions, proposals, or intake decisions.
 
-- What application, product, service, or software-enabled capability is being contemplated?
-- What prompted the project now?
-- What is believed to need improvement, creation, replacement, coordination, or support?
-- Who supplied the current framing?
-- Which statements are evidence-backed observations, stakeholder/source assertions, external constraints, assumptions, hypotheses, open questions, proposals, or intake decisions?
-
-If the initial request already contains proposed features, concepts, architecture, or workflows, preserve them as labeled proposals or context rather than accepting them as design truth.
+If the starting request already contains features, concepts, architecture, or workflows, preserve them as labeled proposals or context rather than design truth.
 
 ## 2. Establish intake evidence posture
 
-Identify what information currently exists, what it can legitimately support, and how authoritative or uncertain it is.
+Identify what information exists, what it can legitimately support, and where provenance, authority, freshness, scope, conflict, uncertainty, or consequence of error require deliberate attention.
 
-Possible sources include:
-
-- direct stakeholder statements;
-- observed workflows or problems;
-- policy, regulatory, legal, or contractual material;
-- existing product documentation;
-- existing software behavior;
-- domain references;
-- market or operational research;
-- prior design documents;
-- analytics or measurements;
-- support history or incident evidence;
-- informal proposals or conversations.
-
-For material sources, consider:
-
-- provenance;
-- authority;
-- freshness;
-- scope;
-- conflicts;
-- uncertainty;
-- consequence of being wrong.
-
-Do not create false certainty merely to make the intake look complete.
+Do not create false certainty to make intake appear complete.
 
 ## 3. Perform the Phase 000 coverage assessment
 
-Every project must assess the required intake dimensions below. This is a **coverage requirement**, not a requirement for one file or subphase per dimension.
+Every project must assess these dimensions. The table is a coverage requirement, not a requirement for one file or subphase per row.
 
 | Intake dimension | Planning disposition |
 |---|---|
-| Contemplated product/application definition | Adequate on entry / needs work / not applicable with rationale |
-| Problem or opportunity context | Adequate on entry / needs work / not applicable with rationale |
-| Actors, stakeholders, and materially affected parties | Adequate on entry / needs work / not applicable with rationale |
-| Desired outcomes or changes sought | Adequate on entry / needs work / not applicable with rationale |
-| Scope boundaries and non-goals | Adequate on entry / needs work / not applicable with rationale |
-| Domain terminology and contextual distinctions | Adequate on entry / needs work / not applicable with rationale |
-| Known external constraints | Adequate on entry / needs work / not applicable with rationale |
-| Assumptions and hypotheses | Adequate on entry / needs work / not applicable with rationale |
-| Open questions and uncertainty | Adequate on entry / needs work / not applicable with rationale |
-| Evidence/source posture | Adequate on entry / needs work / not applicable with rationale |
-| Legacy/current-state context | Adequate on entry / needs work / not applicable with rationale |
+| Contemplated product/application definition | adequate / needs work / not applicable with rationale |
+| Problem or opportunity context | adequate / needs work / not applicable with rationale |
+| Actors, stakeholders, and materially affected parties | adequate / needs work / not applicable with rationale |
+| Desired outcomes or changes sought | adequate / needs work / not applicable with rationale |
+| Scope boundaries and non-goals | adequate / needs work / not applicable with rationale |
+| Domain terminology and contextual distinctions | adequate / needs work / not applicable with rationale |
+| Known external constraints | adequate / needs work / not applicable with rationale |
+| Assumptions and hypotheses | adequate / needs work / not applicable with rationale |
+| Open questions and uncertainty | adequate / needs work / not applicable with rationale |
+| Evidence/source posture | adequate / needs work / not applicable with rationale |
+| Legacy/current-state context | adequate / needs work / not applicable with rationale |
 
-`Not applicable` requires a short rationale. It must not be used to avoid examining an inconvenient dimension.
-
-Dimensions marked `needs work` become candidates for substantive Phase 000 workstreams.
+`Not applicable` requires rationale. Dimensions marked `needs work` become candidates for substantive workstreams.
 
 ## 4. Decide where separate subphases are justified
 
-Do not mechanically translate the coverage table into eleven subphases.
+Do not mechanically translate the coverage table into subphases. Separate work when it materially improves dependency safety, evidence reconciliation, affected-party clarity, ambiguity isolation, reviewability, traceability, or ability to revisit one conclusion without destabilizing unrelated work.
 
-Create a separate subphase when doing so materially improves:
-
-- dependency safety;
-- evidence reconciliation;
-- stakeholder/authority clarity;
-- ability to isolate a difficult ambiguity;
-- reviewability;
-- traceability;
-- ability to revisit one conclusion without destabilizing unrelated intake work.
-
-Related dimensions may be combined when they can be examined coherently without hiding dependencies or uncertainty.
-
-Typical project-specific workstreams may include:
-
-- product/problem definition;
-- actor, stakeholder, and affected-party discovery;
-- desired-outcome and project-boundary framing;
-- domain terminology/context reconstruction;
-- external constraint qualification;
-- legacy/current-state intent reconstruction;
-- evidence conflict and assumption reconciliation;
-- uncertainty/open-question closure.
-
-These are examples, not a canonical subphase list.
+Related dimensions may be combined when doing so does not hide dependencies or uncertainty.
 
 ## 5. Establish dependency order
 
-Order the required work so that later subphases do not depend on conclusions that have not yet been established.
+Order work so later subphases do not rely on conclusions not yet established. Terminology, legacy intent, affected-party discovery, external constraints, evidence conflict, and scope may require different ordering in different projects.
 
-Examples:
-
-- terminology may need clarification before stakeholder statements can be reconciled;
-- legacy intent may need reconstruction before deciding whether current behavior expresses a need or an old technical limitation;
-- affected-party discovery may expose outcomes or scope boundaries that the initial sponsor omitted;
-- an external constraint may need qualification before deciding whether it truly bounds the product or is only one interpretation.
-
-Dependency safety is more important than maintaining a preferred alphabetical count.
+Dependency safety is more important than a preferred alphabetical count.
 
 ## 6. Identify inherited-structure and solution-lock risks
 
-Explicitly inspect the starting material for structures that could bias later concept design.
+Inspect starting material for feature lists treated as requirements, database entities or service boundaries treated as concept boundaries, current screens or workflows treated as future design, implementation limitations presented as user needs, legacy terminology that conflates purposes, or stakeholder preferences presented as external constraints.
 
-Potential risks include:
+Determine whether any such risk requires a deliberate de-biasing or intent-reconstruction workstream.
 
-- proposed feature lists treated as requirements;
-- database entities treated as domain truth;
-- incumbent service/module boundaries treated as concept boundaries;
-- current screens treated as the future interaction model;
-- existing workflows treated as immutable needs;
-- legacy terminology that conflates distinct purposes;
-- implementation limitations presented as user requirements;
-- stakeholder preferences presented as external constraints.
+## 7. Plan canonical ownership and documentation integrity
 
-For each material risk, decide whether Phase 000 needs a dedicated de-biasing or intent-reconstruction workstream.
+Before creating Phase 000 documents:
 
-## 7. Define project-specific Phase 000 subphases
+- identify incoming repository knowledge that should be referenced rather than copied;
+- identify the natural canonical owner for each expected durable intake conclusion;
+- plan a new canonical document only when distinct semantic knowledge needs its own stable identity;
+- identify indexes and cross-links likely to require updates;
+- identify terminology, duplication, supersession, or link-drift risks already present;
+- confirm that planned phase records will capture analysis and evidence without becoming alternative current sources of truth;
+- confirm that ordinary concept documents will follow OKF frontmatter rules and reserved `index.md` files will remain navigational.
 
-Create only the substantive subphases needed for this project.
+A cloned project may use a compact `canonical/project/` family, but the file structure must follow the knowledge rather than a template quota.
 
-For each proposed subphase, define:
+## 8. Define project-specific Phase 000 subphases
 
-- title;
-- purpose;
-- intake dimensions covered;
-- inputs and evidence;
-- key questions;
-- dependencies;
-- expected phase-record outputs;
-- expected canonical knowledge affected;
-- explicit exclusions;
-- completion evidence;
-- unresolved-item handoff.
+For each proposed substantive subphase define its title, purpose, intake dimensions covered, authoritative inputs/references, key questions, dependencies, expected phase evidence, canonical knowledge affected, documentation/index effects, exclusions, completion evidence, and unresolved-item handoff.
 
-Reserve the final project-specific subphase for Phase 000 consolidation, exit review, and Phase 001 handoff using [the Phase 000 exit-review template](exit-review-template.md).
-
-## 8. Define canonical destinations
-
-For each expected durable intake conclusion, identify where it should become current canonical knowledge.
-
-A cloned project may use a compact `canonical/project/` family or another coherent topology. Do not create a directory or file merely to satisfy a template category.
-
-At minimum, future readers must be able to discover the current authoritative statements for the project's:
-
-- definition and context;
-- actors/affected parties;
-- intended outcomes;
-- scope/non-goals;
-- constraints;
-- terminology;
-- assumptions and unresolved questions.
-
-Phase records may contain the richer evidence and reasoning history.
+Reserve the final project-specific subphase for Phase 000 consolidation, documentation-integrity review, exit decision, and Phase 001 handoff using the [exit-review template](exit-review-template.md).
 
 ## 9. Define Phase 000 exit evidence
 
-Before substantive work begins, confirm what evidence will demonstrate readiness for Phase 001.
+The planned exit review must be able to show that the project is understandable without hidden conversational context; motivating context, affected parties, outcomes, scope, terminology, constraints, uncertainty, and evidence posture are adequate; legacy bias and solution lock have been exposed; current knowledge is canonically owned and discoverable; references and indexes remain coherent; no final concept solution has been selected; and no representation, architecture, or implementation work has begun.
 
-The planned exit review must be capable of showing that:
+## 10. Check whether the gate can pass
 
-- the product/application is understandable without hidden conversational context;
-- the motivating problem/opportunity context is sufficiently clear for purpose analysis;
-- important actors and affected parties are visible;
-- intended outcomes are known without predetermining the solution;
-- scope and non-goals constrain inquiry without freezing concept design;
-- material terminology and external constraints are understandable;
-- evidence, assertions, assumptions, hypotheses, proposals, and open questions are distinguishable;
-- material legacy/current-state bias has been exposed where applicable;
-- canonical intake knowledge reflects current truth;
-- no final concept solution has been selected;
-- no representation, architecture, or implementation work has begun.
-
-## 10. Check whether the gate itself can pass
-
-`000-A` may authorize substantive Phase 000 work only if there is enough starting context to define a responsible intake plan.
-
-If the project is so underspecified that even the intake workstreams cannot be identified, record what precondition is missing rather than fabricating a regular-looking phase plan.
+`000-A` may authorize substantive Phase 000 work only if there is enough starting context to define a responsible intake plan. If not, record the missing precondition rather than fabricating a regular-looking phase sequence.
 
 ## Required output
 
@@ -222,14 +111,13 @@ The completed `000-A` record should end with:
 1. neutral starting project statement;
 2. evidence/source posture summary;
 3. completed intake coverage assessment;
-4. identified inherited-structure or solution-lock risks;
-5. approved project-specific Phase 000 subphase sequence;
-6. rationale and dependency order for that decomposition;
-7. canonical knowledge destinations;
-8. completion evidence for each substantive subphase;
-9. planned final consolidation/exit-review subphase;
-10. known intake risks, ambiguities, and open questions;
-11. confirmation of implementation status.
+4. inherited-structure or solution-lock risks;
+5. approved project-specific Phase 000 subphase sequence and dependency rationale;
+6. canonical ownership, index, cross-link, and documentation-change plan;
+7. completion evidence for each substantive subphase;
+8. planned final consolidation/exit-review subphase;
+9. known ambiguities and open questions;
+10. confirmation of implementation status.
 
 ## Gate outcome
 
