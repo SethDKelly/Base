@@ -9,7 +9,7 @@ Every phase is governed by the [Phase Lifecycle Contract](../methodology/phase-l
 - [000 — Project Intake & Product Definition](000/) — pre-methodology project definition and intake. **Refined.**
 - [001 — Purpose, Context, Need & Success Framing](001/) — establish why the product should exist and what purposes the design must serve. **Refined.**
 - [002 — Concept Discovery, Candidate Inventory & Divergent Exploration](002/) — explore alternative candidate concepts without premature convergence. **Refined.**
-- [003 — Concept Definition, Operational Principles & Behavioral Specification](003/) — specify viable concepts through purpose and observable behavior.
+- [003 — Concept Definition, Operational Principles & Behavioral Specification](003/) — specify viable concepts through purpose and observable behavior. **Refined.**
 - [004 — Concept Modularity, Boundary, Specificity, Completeness & Independence](004/) — challenge and stabilize concept factoring before composition.
 - [005 — Concept Composition, Synchronization, Automation & Synergy](005/) — define explicit cross-concept behavior while preserving independence.
 - [006 — Concept Dependence, Product-Family, Subset & Scope Analysis](006/) — distinguish concept independence from application inclusion dependence and scope.
