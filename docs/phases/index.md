@@ -11,7 +11,7 @@ Every phase is governed by the [Phase Lifecycle Contract](../methodology/phase-l
 - [002 — Concept Discovery, Candidate Inventory & Divergent Exploration](002/) — explore alternative candidate concepts without premature convergence. **Refined.**
 - [003 — Concept Definition, Operational Principles & Behavioral Specification](003/) — specify viable concepts through purpose and observable behavior. **Refined.**
 - [004 — Concept Modularity, Boundary, Specificity, Completeness & Independence](004/) — challenge and stabilize concept factoring before composition. **Refined.**
-- [005 — Concept Composition, Synchronization, Automation & Synergy](005/) — define explicit cross-concept behavior while preserving independence.
+- [005 — Concept Composition, Synchronization, Automation & Synergy](005/) — define explicit cross-concept behavior while preserving independence. **Refined.**
 - [006 — Concept Dependence, Product-Family, Subset & Scope Analysis](006/) — distinguish concept independence from application inclusion dependence and scope.
 - [007 — Concept Mapping, Interaction Semantics & User-Visible Representation](007/) — map conceptual semantics into understandable user-facing behavior without implementation.
 - [008 — Familiarity, Reuse, Genericity & Concept-Catalog Refinement](008/) — challenge unnecessary novelty and improve reuse, naming, and genericity.
