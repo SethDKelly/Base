@@ -1,8 +1,8 @@
 ---
 type: Phase Exit Review Template
 title: Phase 011 Methodology Completeness, Canonical Consolidation & Concept-Design Closure Decision Template
-description: Final lifecycle closure test for proving methodology completeness, canonical coherence, unresolved-item disposition, validation sufficiency, implementation-boundary integrity, and downstream handoff readiness.
-tags: [phase-011, closure, methodology, completeness, canonical, handoff, readiness, template]
+description: Final concept-design closure test for methodology completeness, canonical coherence, unresolved-item disposition, validation sufficiency, implementation-boundary integrity, and handoff readiness for Phase 012 pre-implementation preparation.
+tags: [phase-011, closure, methodology, completeness, canonical, handoff, readiness, phase-012, template]
 ---
 
 # Phase 011 Methodology Completeness, Canonical Consolidation & Concept-Design Closure Decision Template
@@ -11,14 +11,14 @@ tags: [phase-011, closure, methodology, completeness, canonical, handoff, readin
 
 The final project-specific Phase 011 subphase uses this template to determine whether concept design is actually complete.
 
-This is not a ceremonial final review and not a summary-document check. It is the lifecycle-wide decision about whether current design truth is coherent, traceable, validated, discoverable, free of unresolved concept-design blockers, and suitable to hand to a separate downstream representation/architecture/engineering process.
+This is not a ceremonial final review and not a summary-document check. It is the lifecycle-wide decision about whether current design truth is coherent, traceable, validated, discoverable, free of unresolved concept-design blockers, and suitable to close concept design and enter Phase 012 repository preparation.
 
 ## Review inputs
 
 Review:
 
 - the approved `011-A` closure plan;
-- [Concept-Design Closure & Downstream Handoff Contract](concept-design-closure-contract.md);
+- [Concept-Design Closure & Phase 012 Handoff Contract](concept-design-closure-contract.md);
 - all successful phase-exit handoffs from 000–010 as evidence;
 - current canonical project/context knowledge;
 - current purpose/need/success knowledge;
@@ -29,38 +29,34 @@ Review:
 - current familiarity/reuse/generalization decisions;
 - current integrity findings and corrections;
 - Phase 010 validation findings, corrections, accepted limitations, and residual uncertainty;
-- current open questions and downstream obligations;
+- current open questions and implementation-facing obligations;
 - repository indexes and graph links;
-- repository-wide phase, documentation-governance, knowledge-authority, and design-only contracts.
+- repository-wide phase, documentation-governance, knowledge-authority, and design-only contracts;
+- [Phase 012 definition](../012/phase-definition.md) for the required post-closure handoff boundary.
 
 Historical phase records may be consulted for rationale/evidence, but they must not substitute for current canonical truth.
 
 ## 1. Planned-work disposition
 
-Confirm every workstream derived by `011-A` is:
+Confirm every workstream derived by `011-A` is completed, superseded by documented refinement, explicitly removed because it became unnecessary, or still incomplete and therefore blocking closure.
 
-- completed;
-- superseded by documented refinement;
-- explicitly removed because it became unnecessary; or
-- still incomplete and therefore blocking closure.
-
-A planned closure artifact existing on disk is not proof that its audit obligation was fulfilled.
+Document existence is not proof that an audit obligation was fulfilled.
 
 ## 2. Lifecycle eligibility audit
 
 Confirm:
 
 - every high-level Phase 000–010 has a successful exit outcome;
-- any `PASS WITH CARRY-FORWARD` item has a current explicit disposition;
+- every material carry-forward has a current explicit disposition;
 - no earlier phase is currently reopened/incomplete;
 - Phase 010 left no material uncorrected misfit, failed representative success path, structural-integrity contradiction, or undispositioned high-consequence scenario;
-- implementation has not begun.
+- implementation execution has not begun.
 
 Any failure here normally means `NOT READY TO CLOSE`.
 
 ## 3. Methodology-chain traceability audit
 
-Verify current knowledge supports the chain, as applicable:
+Verify current knowledge supports, as applicable:
 
 `context / affected need`
 → `purpose / design obligation`
@@ -73,181 +69,81 @@ Verify current knowledge supports the chain, as applicable:
 → `familiarity / reuse / genericity refinement`
 → `whole-system integrity`
 → `scenario / misfit validation`
-→ `limitations / downstream obligations`.
+→ `limitations / implementation-facing obligations`.
 
-For material purposes and concepts, verify the chain is discoverable through natural owners and meaningful references rather than closure-only restatement.
-
-A traceability table may support this review, but it does not replace the current knowledge graph.
+For material purposes and concepts, the chain should be discoverable through natural owners and meaningful references rather than closure-only restatement.
 
 ## 4. Purpose and need closure audit
 
-Verify that:
-
-- important current needs/affected-party interests have an explicit design disposition;
-- every material design-purpose obligation is fulfilled, explicitly bounded, or correctly removed/reframed;
-- representative success framing still matches the final design;
-- no accepted limitation silently negates a purpose the product still claims to fulfill;
-- current purposes are not merely historic rationalizations for concepts that changed later.
+Verify important current needs/affected-party interests have explicit disposition, material design purposes are fulfilled/bounded/reframed appropriately, representative success framing matches the final design, and accepted limitations do not silently negate promises that remain current.
 
 A material purpose with no coherent fulfillment path is blocking.
 
 ## 5. Concept justification audit
 
-For every retained concept, verify:
+For every retained concept, verify a current defensible purpose, credible operational principle, current semantic identity, accurate familiarity/terminology posture, and discoverable specification.
 
-- a current defensible purpose exists;
-- an operational principle demonstrates how the concept fulfills that purpose;
-- its semantic identity remains current after all refinements;
-- it is not retained merely because earlier phases created it;
-- its current name/terminology does not create false familiarity;
-- its specification can be located without reconstructing phase history.
-
-A concept without a defensible current purpose is blocking.
+A concept retained only because earlier phases created it is not sufficient.
 
 ## 6. Behavioral-specification audit
 
-For each retained concept, verify current specification is sufficiently explicit about, as relevant:
+For each retained concept, verify current specification is sufficiently explicit about relevant abstract state, actions, inputs/outputs, preconditions/effects, invariants, lifecycle/time/history/correction semantics, intrinsic authority, and deliberate under-specification.
 
-- abstract state/memory;
-- actions;
-- inputs/outputs;
-- preconditions/effects;
-- invariants;
-- lifecycle/time/history/correction semantics;
-- intrinsic authority;
-- deliberate under-specification.
-
-Check for:
-
-- unused/unjustified state;
-- unexplained actions;
-- purpose-critical missing behavior;
-- implementation representation masquerading as conceptual state/action definition.
+Challenge unused state, unexplained actions, missing purpose-critical behavior, and implementation representation masquerading as concept semantics.
 
 ## 7. Modularity closure audit
 
-Verify Phase 004-quality conclusions still hold after later corrections:
+Verify Phase 004-quality conclusions still hold after later changes:
 
-- specificity — one coherent purpose per concept at the appropriate granularity;
-- completeness — concept behavior minimally fulfills its purpose;
-- independence — peer concepts are not intrinsic prerequisites to understanding/defining the concept;
-- genericity — application-specific coupling has been removed where necessary without erasing meaningful semantics.
+- specificity;
+- minimal completeness;
+- independence;
+- genericity where needed without erasing meaning.
 
-Search explicitly for:
-
-- purpose without concept;
-- concept without purpose;
-- redundant concepts;
-- overloaded concepts;
-- fragments that cannot provide coherent value;
-- hidden intrinsic dependence reintroduced by later changes.
+Search explicitly for purpose without concept, concept without purpose, redundant/overloaded concepts, fragments with no coherent value, and reintroduced hidden dependence.
 
 ## 8. Composition and application-action audit
 
-Verify that:
-
-- material cross-concept application behavior is represented by current synchronization/composition knowledge;
-- the application action surface is deliberate;
-- no synchronization silently redefines participant concepts;
-- triggers/participants/bindings/conditions/results are conceptually understandable where relevant;
-- authority/precondition/invariant compatibility remains valid;
-- known over-/under-synchronization defects are resolved;
-- late corrections did not leave stale synchronization rules.
-
-A current application behavior that exists only in prose or implementation expectation is a closure gap.
+Verify material cross-concept behavior is represented by current synchronization/composition knowledge, the application action surface is deliberate, participant concepts are not redefined by synchronization, compatibility remains valid, and late corrections did not leave stale composition rules.
 
 ## 9. Dependence, product-family, and scope audit
 
-Verify that:
-
-- intrinsic concept independence remains distinct from extrinsic application dependence;
-- material dependency edges have contextual rationale;
-- representative valid/invalid subsets are understandable;
-- in-scope product/application variants are explicit;
-- coherent-but-out-of-scope variants are not accidentally represented as supported;
-- variant composition/action-surface semantics remain consistent with Phase 005 authority;
-- current project scope matches the final purpose/context baseline.
+Verify intrinsic independence remains distinct from extrinsic application dependence, dependency edges have contextual rationale, representative valid/invalid subsets are understandable, in-scope variants are explicit, and current project scope matches the final purpose/context baseline.
 
 ## 10. Mapping and experience closure audit
 
-Verify that current mapping knowledge faithfully preserves:
+Verify current mapping faithfully preserves relevant state visibility, application-action availability/invocation, consequential feedback/results, terminology, structural distinctions needed for meaning, synchronization/automation consequences, authority/target/scope/disclosure, lifecycle/history/correction/finality, variant differences, and accessibility/context obligations that affect semantics.
 
-- state users/affected parties need to understand;
-- application-action availability/invocation semantics;
-- consequential feedback/results;
-- terminology/linguistic distinctions;
-- semantically necessary physical/structural constraints;
-- synchronization/automation consequences;
-- authority/target/scope/disclosure;
-- lifecycle/history/correction/finality where material;
-- in-scope variant differences;
-- accessibility/context-of-use obligations that affect meaning.
-
-Known misleading mapping or false action availability is blocking.
+Known misleading mapping is blocking.
 
 ## 11. Familiarity, reuse, and genericity closure audit
 
-Verify that:
-
-- adopted familiar concepts still have materially compatible semantics;
-- false familiarity has been corrected;
-- retained novelty is justifiable where relevant;
-- broader generalizations remain purpose-specific and user-comprehensible;
-- terminology changes are propagated;
-- reusable/catalog knowledge does not create parallel current concept authority;
-- Phase 008 changes did not leave stale pre-refinement semantics downstream.
+Verify familiar concepts remain semantically compatible, false familiarity is corrected, retained novelty/generalization is justified, terminology changes propagated, reusable/catalog knowledge does not duplicate current concept authority, and Phase 008 changes did not leave stale downstream semantics.
 
 ## 12. Integrity closure audit
 
 Verify every materially important concept still fulfills its purpose when composed in relevant variants.
 
-Check that no known current interaction:
-
-- disables a purpose-critical action;
-- changes intrinsic action meaning;
-- creates contradictory state/invariants;
-- bypasses or distorts authority;
-- breaks lifecycle/history/correction semantics;
-- creates hidden automation consequences;
-- causes mapping/mental-model contradiction;
-- gives the same concept incompatible intrinsic meaning across variants.
-
-If Phase 010 corrections affected any of these surfaces, verify integrity was rechecked.
-
-Known integrity violation is always blocking.
+A known current interaction that disables purpose-critical behavior, changes intrinsic meaning, creates contradictory state, bypasses authority, breaks lifecycle/correction semantics, hides automation consequences, or creates mapping contradiction is blocking.
 
 ## 13. Validation and misfit closure audit
 
-Verify Phase 010 established:
-
-- representative success still works end to end;
-- materially likely/consequential scenario families received appropriate pressure;
-- material misfits were corrected or explicitly bounded;
-- corrections were propagated to natural owners;
-- corrected areas were revalidated;
-- accepted limitations are compatible with current purposes/promises;
-- residual uncertainty is explicit;
-- conceptual concerns are separated from downstream engineering realization concerns.
-
-A large scenario corpus is not a substitute for this evidence.
+Verify Phase 010 established representative success, appropriate risk-weighted adversarial coverage, correction/bounding of material misfits, propagation to natural owners, revalidation, compatible accepted limitations, explicit residual uncertainty, and separation of conceptual concerns from realization concerns.
 
 ## 14. Orphan and unexplained-element audit
 
 Perform a final search for material orphans, including:
 
 - needs/purposes without fulfillment;
-- concepts without purpose;
-- concepts without OP;
-- behavior without rationale;
-- state with no semantic role;
+- concepts without purpose/OP;
+- behavior/state without rationale;
 - synchronizations without application justification;
-- dependency edges without rationale;
-- variants without purpose/scope rationale;
+- dependency edges or variants without rationale;
 - mappings without conceptual source;
 - open questions without disposition;
-- limitations without canonical owner;
+- limitations without current owner;
 - engineering obligations without stated conceptual property;
-- canonical documents without meaningful navigation/graph role.
+- current documents without meaningful navigation/graph role.
 
 Each material orphan must be removed, corrected, bounded, or routed to reopening before closure.
 
@@ -262,101 +158,63 @@ Classify every material current unresolved item as:
 - **Obsolete/superseded**;
 - **Concept-design blocker**.
 
-Confirm accepted limitations and bounded uncertainty do not contradict current promises or mislead users materially.
-
 A material blocker prevents closure.
 
 ## 16. Canonical authority reconciliation audit
 
-Apply the repository-wide documentation and knowledge-authority contracts at full-corpus scale.
+Apply repository documentation and knowledge-authority contracts at full-corpus scale.
 
-Verify:
-
-- each durable current rule has one natural owner;
-- no known current documents contradict one another materially;
-- obsolete identities/rules are clearly superseded;
-- historical phase records remain evidence rather than present authority;
-- current indexes expose authoritative entry points;
-- meaningful internal links resolve to intended authorities;
-- terminology is coherent;
-- current documents use valid OKF structure;
-- provenance is present where materially required;
-- no material current document is orphaned from progressive disclosure;
-- duplicate summaries/catalog copies/closure restatements have been consolidated.
+Verify one natural owner per durable current rule, no known material contradictions, clear supersession, historical phase records as evidence rather than current authority, current indexes, meaningful links, coherent terminology, valid OKF structure, appropriate provenance, discoverability, and consolidation of duplicate summaries/catalog copies.
 
 A reader should not need to scan all phase history to determine current design truth.
 
 ## 17. Final-design discoverability audit
 
-Verify there is a clear route from the bundle root into current design knowledge.
+Verify there is a clear progressive-disclosure route from `docs/index.md` into current purpose/boundary knowledge, concepts, composition, variants, mappings, authority/lifecycle rules, limitations, downstream questions, and historical evidence when needed.
 
-A competent reader should be able to find, without special oral knowledge:
-
-- what the product is for and where its boundaries lie;
-- current concepts and behavior;
-- composition/application actions;
-- product scope/variants;
-- user-visible semantics;
-- important authority/lifecycle/history rules;
-- accepted limitations;
-- current unresolved downstream questions;
-- where historical rationale/validation evidence lives.
-
-Do not require a monolithic final specification if existing indexes provide better progressive disclosure.
+Do not require a monolithic final specification if existing indexes provide better navigation.
 
 ## 18. Implementation-contamination audit
 
-Search current authoritative design for accidental solution lock-in.
+Challenge current design authority that unnecessarily prescribes source/module/service topology, schemas/storage engines, APIs/protocols/messages, workflow/orchestration, cloud/deployment topology, languages/frameworks/vendors, executable tests/CI/CD, concrete security mechanisms, or implementation sequencing.
 
-Challenge rules that unnecessarily prescribe:
+Preserve required conceptual properties while removing contingent machinery.
 
-- source/package/module/service topology;
-- schemas/migrations/storage engines;
-- APIs/protocols/message formats;
-- queues/workflow/orchestration architecture;
-- cloud/deployment/infrastructure topology;
-- languages/frameworks/vendors;
-- executable test harness structure;
-- CI/CD/application-delivery mechanics;
-- security implementation mechanisms rather than conceptual authority/property;
-- implementation sequencing as though it were concept semantics.
+## 19. Phase 012 handoff sufficiency audit
 
-Preserve legitimate conceptual constraints while removing contingent machinery.
+Verify Phase 012 can begin without reconstructing design history and can discover:
 
-## 19. Downstream handoff sufficiency audit
-
-Verify a downstream representation/architecture/engineering process can discover:
-
-- authoritative conceptual design entry points;
+- authoritative current design entry points;
 - in-scope variants/product boundaries;
 - non-negotiable observable behavior;
 - application actions/composition;
 - authority/safety/privacy properties where relevant;
-- lifecycle/history/correction requirements;
+- lifecycle/history/correction/recovery requirements;
 - mapping/experience obligations;
 - accepted limitations/non-goals;
-- validation scenarios/conceptual obligations future work must preserve;
-- unresolved engineering questions stated without solution lock-in.
+- validation scenarios/conceptual obligations future engineering should preserve;
+- unresolved engineering questions with clear conceptual requirements;
+- known documentation/index/supersession areas appropriate for Phase 012 audit.
 
-The handoff may identify required qualities and constraints, but must not prescribe the downstream architecture merely to make the handoff feel complete.
+The handoff must not prescribe architecture merely to feel complete.
 
 ## 20. Closure-state transition audit
 
-Before deciding closure, confirm current state remains:
+Before deciding closure, confirm:
 
 - **Implementation readiness:** not ready
 - **Implementation execution:** not started
 - **Implementation authorization:** not yet
 
-If and only if the closure decision is successful, record the transition:
+If and only if closure succeeds, record:
 
 - **Implementation readiness:** ready
 - **Implementation execution:** not started
-- **Implementation execution authorization:** not granted by this lifecycle
+- **Implementation execution authorization:** not granted by Phase 011
 
 Also record explicitly:
 
-> A separate downstream representation/architecture/engineering process may now begin. Phase 011 does not itself authorize implementation execution.
+> Phase 012 pre-implementation preparation may now begin. Feature implementation execution has not been authorized.
 
 ## 21. Final closure readiness questions
 
@@ -366,73 +224,46 @@ A competent reviewer should be able to answer **yes** to all of the following:
 - Can material purposes be traced to concepts and validated outcomes?
 - Does every retained concept have a defensible purpose, OP, and adequate behavioral specification?
 - Are concept boundaries specific, complete, independent, and sufficiently generic?
-- Are material cross-concept behaviors explicit through synchronization/application actions?
-- Are contextual dependencies, valid subsets, and in-scope variants explicit?
-- Are user-visible mappings faithful to concept/application semantics?
-- Have familiarity/reuse/generalization decisions been propagated coherently?
+- Are material cross-concept behaviors explicit?
+- Are dependencies, valid subsets, and in-scope variants explicit?
+- Are user-visible mappings faithful?
+- Have familiarity/reuse/generalization decisions propagated coherently?
 - Does each concept preserve its purpose in composition?
 - Has the mature design survived representative and adversarial validation?
-- Are accepted limitations and bounded uncertainties explicit and compatible with current promises?
+- Are limitations/uncertainties explicit and compatible with current promises?
 - Are all material open questions dispositioned?
-- Is current canonical knowledge coherent, discoverable, and non-duplicative?
-- Has implementation contamination been removed from current design authority?
-- Can a downstream process preserve the design without Phase 011 choosing its architecture?
-- Has implementation remained not started?
+- Is current knowledge coherent, discoverable, and non-duplicative?
+- Has implementation contamination been removed from design authority?
+- Can Phase 012 begin from current authority without repairing unfinished concept design?
+- Has implementation execution remained not started?
 
 If any material answer is no, Phase 011 is not ready to close.
 
 ## 22. Closure decision
 
-Use one of the following.
-
 ### PASS — CONCEPT DESIGN CLOSED
 
 All methodology, canonical, validation, and handoff obligations required for concept-design closure are satisfied.
-
-Record:
-
-- closure rationale;
-- final design entry points;
-- accepted limitations/non-goals;
-- bounded uncertainty;
-- downstream obligations;
-- final canonical/documentation reconciliation summary;
-- readiness transition.
 
 Final state:
 
 - **Implementation readiness:** ready
 - **Implementation execution:** not started
-- **Implementation execution authorization:** not granted by this lifecycle
+- **Implementation execution authorization:** not granted by Phase 011
 
-A separate downstream representation/architecture/engineering process may begin.
+**Next Base phase:** Phase 012 pre-implementation preparation.
 
 ### PASS WITH BOUNDED CARRY-FORWARD — CONCEPT DESIGN CLOSED
 
-Use only when all substantive concept-design work is complete and remaining items are limited to:
+Use only when all substantive concept-design work is complete and remaining items are limited to accepted limitations/non-goals, bounded uncertainty compatible with closure, or downstream questions whose conceptual obligations are already clear.
 
-- accepted limitations/non-goals;
-- bounded uncertainty compatible with closure;
-- downstream representation/architecture/engineering questions whose conceptual obligations are already clear.
-
-Do not use this outcome for unfinished purpose, concept, behavior, modularity, composition, scope, mapping, familiarity, integrity, validation, canonical-reconciliation, or implementation-contamination work.
-
-If these restrictions are met, final state is the same as `PASS`:
-
-- **Implementation readiness:** ready
-- **Implementation execution:** not started
-- **Implementation execution authorization:** not granted by this lifecycle
+Final state is the same as `PASS`, and Phase 012 receives those bounded carry-forwards explicitly.
 
 ### NOT READY TO CLOSE
 
 Use when any material methodology, semantic, validation, documentation-authority, traceability, handoff, or implementation-boundary defect remains.
 
-Record:
-
-- blocking findings;
-- natural earlier phase/owner to reopen;
-- required propagation/revalidation;
-- conditions for re-entering final closure review.
+Record blocking findings, earlier phase/owner to reopen, required propagation/revalidation, and conditions for re-entering closure.
 
 State remains:
 
@@ -446,15 +277,15 @@ The final Phase 011 record should contain or link to:
 
 - closure outcome;
 - authoritative current-design entry points;
-- methodology-completeness/traceability evidence entry point;
+- methodology-completeness/traceability evidence;
 - material gap/orphan dispositions;
-- final accepted limitations/non-goals;
+- accepted limitations/non-goals;
 - bounded uncertainties;
-- downstream obligations/questions;
+- implementation-facing obligations/questions;
 - final documentation/canonical reconciliation outcome;
 - implementation-contamination outcome;
-- downstream handoff entry point;
+- Phase 012 handoff entry point;
 - final readiness state;
-- explicit statement that implementation execution has not begun and is not authorized by this lifecycle.
+- explicit statement that implementation execution has not begun and is not authorized by Phase 011.
 
 Keep the closure record concise enough to function as an audit and handoff entry point. Do not duplicate the complete design corpus into it.
