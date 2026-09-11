@@ -1,8 +1,8 @@
 ---
 type: Phase Start Gate
 title: 011-A — Closure Scope, Methodology Traceability, Canonical Reconciliation & Subphase Planning
-description: Mandatory Phase 011 start gate for planning whole-lifecycle completeness, canonical reconciliation, gap closure, implementation-boundary review, and final concept-design handoff.
-tags: [phase-011, start-gate, closure, traceability, canonical, completeness, handoff]
+description: Mandatory Phase 011 start gate for planning whole-lifecycle completeness, canonical reconciliation, gap closure, implementation-boundary review, and handoff into Phase 012 pre-implementation preparation.
+tags: [phase-011, start-gate, closure, traceability, canonical, completeness, handoff, phase-012]
 ---
 
 # 011-A — Closure Scope, Methodology Traceability, Canonical Reconciliation & Subphase Planning
@@ -11,7 +11,7 @@ tags: [phase-011, start-gate, closure, traceability, canonical, completeness, ha
 
 Phase 011 is not another local design-analysis phase. It determines whether the entire Base concept-design lifecycle has been completed coherently enough to close.
 
-`011-A` therefore plans a **whole-methodology audit** over the current design and its evidence. It must establish what needs to be traced, reconciled, reopened, dispositioned, and handed off before the project can make any concept-design closure decision.
+`011-A` therefore plans a **whole-methodology audit** over the current design and its evidence. It must establish what needs to be traced, reconciled, reopened, dispositioned, and handed to Phase 012 before the project can make any concept-design closure decision.
 
 The gate does **not** declare the design complete. It only determines whether final closure work can begin responsibly and what project-specific subphases that work requires.
 
@@ -20,7 +20,7 @@ The gate does **not** declare the design complete. It only determines whether fi
 Apply:
 
 - [Phase 011 definition](phase-definition.md);
-- [Concept-Design Closure & Downstream Handoff Contract](concept-design-closure-contract.md);
+- [Concept-Design Closure & Phase 012 Handoff Contract](concept-design-closure-contract.md);
 - [Phase 011 Closure Decision Template](exit-review-template.md);
 - repository-wide [Phase Lifecycle Contract](../../methodology/phase-lifecycle.md);
 - [Documentation Integrity & OKF Governance Contract](../../methodology/documentation-governance.md);
@@ -61,7 +61,7 @@ Identify the canonical entry points that collectively state the current design, 
 - current open questions or bounded uncertainties;
 - durable validation/integrity conclusions.
 
-Do not infer current truth from whichever phase record is easiest to find. Phase records are evidence; canonical knowledge is the current authority.
+Do not infer current truth from whichever phase record is easiest to find. Phase records are evidence; canonical knowledge is current authority.
 
 ## 3. Plan methodology-chain traceability
 
@@ -77,7 +77,7 @@ Plan how the project will verify the current design chain:
 → `user-visible mapping`
 → `familiarity / genericity / terminology refinement`
 → `integrity preservation`
-→ `representative and adversarial validation`
+→ `representative and adversarial validation`.
 
 Traceability may be represented through links, a compact matrix, graph navigation, or another suitable form. Do not duplicate full canonical specifications merely to make a closure matrix self-contained.
 
@@ -101,43 +101,17 @@ The closure work must search deliberately for orphaned or unjustified elements, 
 - downstream obligation with no conceptual property to preserve;
 - current canonical document with no discoverable role in the design graph.
 
-The gate should identify which of these checks require dedicated project-specific workstreams.
+## 5. Plan contradiction and supersession audit
 
-## 5. Plan cross-phase contradiction and supersession audit
-
-Identify areas where late refinement could have left incompatible current statements, especially after:
-
-- Phase 004 boundary changes;
-- Phase 005 composition changes;
-- Phase 006 scope/variant changes;
-- Phase 007 terminology/mapping changes;
-- Phase 008 familiarity/generalization changes;
-- Phase 009 integrity corrections;
-- Phase 010 scenario-driven corrections.
+Identify areas where late refinement could have left incompatible current statements, especially after Phase 004 boundary changes, Phase 005 composition changes, Phase 006 scope changes, Phase 007 terminology/mapping changes, Phase 008 familiarity/generalization changes, Phase 009 integrity corrections, and Phase 010 scenario-driven corrections.
 
 Plan how obsolete current statements, stale links, terminology drift, duplicate concept identities, and unreconciled supersession will be detected and corrected.
 
 ## 6. Plan open-item and limitation disposition
 
-Inventory current:
+Inventory current open questions, carry-forwards, accepted limitations/non-goals, bounded uncertainties, downstream engineering obligations, and provisional knowledge that may have survived longer than intended.
 
-- open questions;
-- carry-forwards;
-- accepted limitations/non-goals;
-- bounded uncertainties;
-- downstream representation/architecture/engineering obligations;
-- provisional knowledge that may have survived longer than intended.
-
-For each, Phase 011 must ultimately determine whether it is:
-
-- resolved in current canonical knowledge;
-- an explicit accepted limitation compatible with closure;
-- a bounded uncertainty compatible with closure;
-- a downstream obligation whose conceptual requirement is already clear;
-- obsolete/superseded;
-- a concept-design blocker requiring reopening of an earlier phase.
-
-No material item may simply disappear from the closure corpus.
+For each, Phase 011 must ultimately determine whether it is resolved, accepted/bounded, a downstream question with clear conceptual obligation, obsolete/superseded, or a concept-design blocker requiring reopening.
 
 ## 7. Plan documentation and knowledge-graph reconciliation
 
@@ -150,7 +124,7 @@ Plan review of:
 - phase records incorrectly functioning as present authority;
 - stale provisional status;
 - superseded concepts/rules still indexed as current;
-- missing or misleading directory indexes;
+- missing or misleading indexes;
 - broken or stale internal links;
 - orphan canonical documents;
 - inconsistent terminology;
@@ -158,87 +132,49 @@ Plan review of:
 - provenance where current knowledge materially depends on sources;
 - progressive-disclosure quality from bundle root into canonical knowledge.
 
-Closure requires a future reader or agent to locate current design truth without reconstructing eleven phases of history.
+Phase 012 will perform a second post-closure repository/OKF/staleness hardening audit. Phase 011 must still close design authority coherently enough for that preparation phase to begin.
 
 ## 8. Plan implementation-contamination audit
 
-Review whether any current design authority has accidentally frozen or introduced implementation decisions such as:
-
-- source/package/module/service topology;
-- executable schemas/migrations;
-- API or transport design;
-- database/storage choices;
-- framework/platform/vendor choices;
-- deployment/infrastructure topology;
-- runtime orchestration;
-- executable tests/harnesses;
-- CI/CD/application-delivery setup;
-- authentication/authorization implementation;
-- concrete engineering sequencing presented as concept truth.
+Review whether any current design authority has accidentally frozen or introduced implementation decisions such as source/package/module/service topology, executable schemas/migrations, API/transport design, database/storage choices, framework/platform/vendor choices, deployment/infrastructure topology, runtime orchestration, executable tests/harnesses, CI/CD, authentication implementation, or concrete engineering sequencing presented as concept truth.
 
 The closure audit must preserve conceptual properties and downstream constraints while removing premature solution authority.
 
-## 9. Plan downstream handoff without premature architecture
+## 9. Plan Phase 012 handoff
 
-Determine what a downstream process must know after successful closure without designing that downstream solution now.
+Determine what Phase 012 must know after successful closure without turning Phase 011 into repository polish or implementation work.
 
-Potential handoff classes include:
+The handoff should identify:
 
 - final conceptual design entry points;
 - non-negotiable observable semantics;
 - authority/safety/privacy properties;
-- lifecycle/history/correction requirements;
+- lifecycle/history/correction/recovery requirements;
 - consistency/atomicity/interoperability qualities stated abstractly;
-- accepted limitations and product-scope boundaries;
+- accepted limitations/product-scope boundaries;
 - unresolved engineering questions;
-- validation scenarios or conceptual obligations future engineering must preserve.
+- validation scenarios/conceptual obligations future engineering must preserve;
+- known documentation/index/supersession areas Phase 012 should inspect.
 
-Do not create architecture, implementation phases, source topology, schemas, APIs, infrastructure, or executable verification artifacts inside Phase 011.
+Do not create architecture, implementation phases, source topology, schemas, APIs, infrastructure, executable verification artifacts, or agent-development scaffolding inside Phase 011.
 
 ## 10. Derive dependency-safe Phase 011 subphases
 
 Create only the workstreams required by the project.
 
-Possible workstream shapes may include, but are not prescribed as fixed subphases:
+Possible workstream shapes include methodology traceability/orphan audit, canonical corpus reconciliation, unresolved-item disposition, contradiction/supersession review, implementation-contamination audit, Phase 012 handoff preparation, and final closure decision.
 
-- methodology traceability/orphan audit;
-- canonical corpus reconciliation;
-- unresolved-item and limitation disposition;
-- cross-phase contradiction/supersession review;
-- implementation-contamination and downstream-boundary audit;
-- final design entry-point/handoff preparation;
-- closure decision.
-
-Order work so that substantive gaps are resolved before cosmetic consolidation and final handoff packaging.
+Order work so substantive gaps are resolved before cosmetic consolidation and handoff packaging.
 
 ## 11. Documentation/coherence plan
 
-Record:
+Record canonical documents and indexes the closure audit will consume, historical phase evidence required only for rationale, current owners to be corrected/consolidated, indexes/cross-links likely to change, duplicate/supersession/terminology/link risks, and how closure evidence will reference current truth instead of restating it.
 
-- canonical documents and indexes the closure audit will consume;
-- historical phase records needed as evidence only;
-- expected canonical owners to be corrected or consolidated;
-- whether any genuinely new closure/handoff knowledge needs a distinct document;
-- indexes/cross-links likely to change;
-- duplicate/supersession/terminology/link risks;
-- how closure evidence will reference canonical truth instead of restating it;
-- how historical traceability will be preserved without leaving phase records authoritative.
-
-Do not create a new canonical summary merely because Phase 011 exists. Create one only if it has a distinct durable role, such as an explicit closure decision or downstream handoff entry point.
+Do not create a new canonical summary merely because Phase 011 exists.
 
 ## 12. Define completion evidence
 
-The Phase 011 plan must identify evidence sufficient to decide:
-
-- methodology completeness;
-- traceability completeness;
-- absence/disposition of material orphans;
-- canonical coherence;
-- open-item/limitation disposition;
-- documentation/OKF integrity;
-- absence of implementation contamination;
-- downstream handoff sufficiency;
-- readiness-state transition eligibility.
+The Phase 011 plan must identify evidence sufficient to decide methodology completeness, traceability completeness, orphan disposition, canonical coherence, open-item/limitation disposition, documentation/OKF integrity, absence of implementation contamination, Phase 012 handoff sufficiency, and readiness-state transition eligibility.
 
 The final subphase must use the [Phase 011 Closure Decision Template](exit-review-template.md).
 
@@ -254,7 +190,7 @@ Record:
 - open-item/limitation disposition plan;
 - documentation/knowledge-graph reconciliation plan;
 - implementation-contamination audit plan;
-- downstream handoff planning scope;
+- Phase 012 handoff planning scope;
 - dependency-safe substantive subphases;
 - completion evidence;
 - final closure-review subphase;
@@ -277,4 +213,4 @@ Use when an earlier phase remains materially incomplete, current design authorit
 - **Execution:** not started
 - **Authorization:** not yet
 
-`011-A` cannot change implementation readiness. Only the final successful Phase 011 closure decision may do so, and even that does not start or automatically authorize implementation execution.
+`011-A` cannot change implementation readiness. Only the final successful Phase 011 closure decision may do so, and even that authorizes only Phase 012 preparation—not implementation execution.
