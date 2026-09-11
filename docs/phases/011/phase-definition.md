@@ -1,58 +1,369 @@
 ---
 type: Phase Definition
 title: Phase 011 — Methodology Completeness, Canonical Consolidation & Concept-Design Closure
-description: Audits the entire design against the Jackson-aligned methodology, reconciles canonical truth, dispositions remaining gaps, and determines whether concept design is complete.
-tags: [phase-011, completeness, consolidation, closure, concept-design]
+description: Performs the lifecycle-wide closure audit over methodology traceability, canonical current truth, unresolved-item disposition, validation evidence, implementation-boundary integrity, and downstream handoff readiness.
+tags: [phase-011, methodology-completeness, canonical-consolidation, closure, traceability, handoff, concept-design]
+sources:
+  - id: jackson-distillation
+    resource: https://essenceofsoftware.com/posts/distillation/
+    title: The Essence of the Essence — Daniel Jackson
+  - id: jackson-design-engineering
+    resource: https://essenceofsoftware.com/tutorials/design-general/design-vs-engineering/
+    title: Design vs. engineering — Daniel Jackson
+  - id: jackson-integrity
+    resource: https://essenceofsoftware.com/posts/sample-chapters/eos-11-concept-integrity.pdf
+    title: Concept Integrity — Daniel Jackson
 ---
 
 # Phase 011 — Methodology Completeness, Canonical Consolidation & Concept-Design Closure
 
 ## Role in the lifecycle
 
-Phase 011 is the final concept-design closure phase. It is not merely another local phase exit review: it examines the entire design corpus and lifecycle to determine whether the project has actually completed the adopted methodology.
+Phase 011 is the final and strongest gate in the Base concept-design lifecycle.
+
+It does not add another semantic layer to the product. Instead, it audits the **entire current conceptual design and the methodology evidence that produced it**.
+
+Phases 000–010 progressively establish context, purpose, concepts, behavior, boundaries, composition, scope, mapping, familiarity, integrity, and adversarial validation. Phase 011 now determines whether those pieces form one complete, coherent, traceable, discoverable design suitable for downstream representation/architecture/engineering work.
+
+A project does not close merely because all phase files exist or all earlier phases once reported `PASS`.
 
 ## Methodological intention
 
-Demonstrate traceable, coherent, methodology-wide completion from project purpose through concept definition, factoring, composition, dependence, mapping, refinement, integrity, and adversarial validation; reconcile canonical current truth; and determine whether concept design may hand off to a downstream representation/architecture/implementation lifecycle.
+Demonstrate that:
 
-## Primary design questions
+- material needs/purposes are traceably fulfilled or explicitly bounded;
+- every retained concept has current purpose and behavioral justification;
+- concept specifications, composition, scope, and mappings are coherent;
+- Jackson-aligned specificity, familiarity, and integrity principles remain satisfied in the final design;[^jackson-distillation]
+- Phase 010 validation findings have been corrected or legitimately bounded;
+- accepted limitations and residual uncertainty are explicit;
+- canonical knowledge states current truth without relying on superseded phase history;
+- implementation assumptions have not contaminated conceptual authority;
+- a downstream process can preserve the design without Phase 011 prescribing its architecture.
 
-- Can important needs and purposes be traced to the concepts intended to fulfill them?
-- Does every retained concept have a clear purpose, operational principle, and adequate behavioral specification?
-- Are boundaries specific, complete, independent, and appropriately generic?
-- Are cross-concept interactions explicit through synchronization?
-- Are inclusion dependencies and product-family boundaries explicit?
-- Are user-visible mappings coherent with concept semantics?
-- Have familiarity and integrity been deliberately audited?
-- Have representative, exceptional, failure, temporal, authority, and misfit scenarios been addressed?
-- Are there orphan purposes, unjustified concepts, unexplained actions, hidden dependencies, contradictions, or material gaps?
-- Does canonical knowledge reflect current truth without relying on superseded phase records?
-- Did implementation assumptions contaminate the design?
+[^jackson-distillation]: Daniel Jackson, "The Essence of the Essence."
 
-## Prerequisites
+## Base operationalization versus Jackson authority
 
-Phases 000–010 must have successfully exited, subject only to explicit carry-forward items appropriate for final closure.
+Daniel Jackson does not prescribe a numbered lifecycle ending in a formal `Phase 011` closure gate.
 
-## Expected durable outputs
+Base uses this phase as an operational control layer around the adopted concept-design method.
 
-Typically includes methodology completeness matrix, purpose-to-concept-to-behavior traceability, canonical reconciliation, supersession/conflict cleanup, unresolved-item disposition, final design summaries, documented limitations/non-goals, closure decision, and downstream handoff package that does not prescribe implementation.
+The closure audit therefore checks the substantive Jackson design objects and principles—purposes, concepts, operational principles, state/actions, composition, dependence, mapping, specificity, familiarity, integrity, and fit—without presenting the Base phase sequence as Jackson's official process.
 
-## Explicit exclusions
+## Closure chain
 
-Phase 011 must not begin architecture or implementation as part of proving readiness.
+The current design should support a coherent knowledge path:
+
+`project context / affected need`
+→ `purpose / design obligation`
+→ `concept`
+→ `operational principle`
+→ `state / actions / invariants`
+→ `synchronization / application action`
+→ `dependence / subset / scope`
+→ `user-visible mapping`
+→ `familiarity / reuse / genericity refinement`
+→ `whole-system integrity`
+→ `representative and adversarial validation`
+→ `accepted limitations / downstream obligations`.
+
+This chain is semantic and navigational. It does not require one document per node or a giant duplicated closure specification.
+
+## Relationship to Phase 010
+
+Phase 010 answers:
+
+> Has the mature conceptual design been challenged against representative and adverse context, with material misfits corrected or explicitly bounded?
+
+Phase 011 answers:
+
+> Has the entire concept-design methodology now been completed coherently, does canonical knowledge reflect that final design, and may the project close concept design?
+
+Phase 011 must not absorb an uncorrected Phase 010 misfit as a closure note. If validation exposed unfinished design, reopen the natural earlier phase and return to closure only after correction and revalidation.
+
+## Relationship to downstream representation/architecture/engineering work
+
+Jackson distinguishes software design from engineering: design establishes the user-facing behavioral form, while engineering later realizes it in technology.[^jackson-design]
+
+Phase 011 may establish **readiness for downstream work**. It does not perform that work.
+
+[^jackson-design]: Daniel Jackson, "Design vs. engineering."
+
+A successful closure therefore changes readiness, not execution.
+
+## Governing Phase 011 support contracts
+
+Phase 011 is further governed by:
+
+- [011-A — Closure Scope, Methodology Traceability, Canonical Reconciliation & Subphase Planning](011-a-start-gate.md);
+- [Concept-Design Closure & Downstream Handoff Contract](concept-design-closure-contract.md);
+- [Phase 011 Methodology Completeness, Canonical Consolidation & Concept-Design Closure Decision Template](exit-review-template.md);
+- repository-wide [Phase Lifecycle Contract](../../methodology/phase-lifecycle.md);
+- [Documentation Integrity & OKF Governance Contract](../../methodology/documentation-governance.md);
+- [Canonical and Historical Knowledge Authority](../../methodology/knowledge-authority.md);
+- [Design-Only Guardrails](../../methodology/design-only-guardrails.md).
+
+These establish closure obligations without prescribing a fixed completeness matrix, handoff format, document count, or B–X subphase sequence.
+
+## Primary closure questions
+
+Phase 011 should answer, as relevant:
+
+- Can material needs and purposes be traced to current concepts and validated outcomes?
+- Does every retained concept have a defensible current purpose and operational principle?
+- Are current state/actions/invariants/lifecycle/authority semantics adequate and representation-independent?
+- Are concept boundaries still specific, complete, independent, and sufficiently generic?
+- Are application behaviors explicit through current synchronizations/application actions?
+- Are contextual dependencies, coherent subsets, and in-scope variants explicit?
+- Are user-visible mappings faithful and discoverable?
+- Have familiarity/reuse/generalization changes been fully propagated?
+- Does every concept still fulfill its purpose in composition?
+- Has the mature final design survived appropriate representative and adversarial validation?
+- What accepted limitations, bounded uncertainties, and downstream obligations remain?
+- Are there orphan purposes, concepts, actions, synchronizations, dependencies, mappings, findings, or canonical documents?
+- Does the canonical corpus state one current truth without depending on superseded phase records?
+- Is implementation contamination absent from current design authority?
+- Can downstream work begin from conceptual requirements without Phase 011 choosing its architecture?
+
+## Required closure coverage
+
+Every successful Phase 011 closure must establish or explicitly disposition:
+
+- lifecycle/phase eligibility;
+- methodology-chain traceability;
+- purpose/need fulfillment;
+- concept justification;
+- behavioral specification completeness;
+- modularity/specificity/completeness/independence;
+- synchronization/application action coverage;
+- dependence/subset/scope coherence;
+- mapping/experience fidelity;
+- familiarity/reuse/genericity final state;
+- integrity preservation;
+- Phase 010 validation sufficiency;
+- orphan/unexplained-element findings;
+- open-question/limitation/uncertainty disposition;
+- canonical authority reconciliation;
+- progressive-disclosure/index/reference integrity;
+- implementation-contamination review;
+- downstream handoff sufficiency;
+- final readiness-state decision.
+
+This is semantic and knowledge-system coverage, not a required number of closure artifacts.
+
+## Methodology completeness discipline
+
+Methodology completion is not equivalent to chronological phase completion.
+
+Later design changes can invalidate earlier conclusions. Phase 011 must therefore assess the **current design** against the methodology, not merely confirm that each phase once ran.
+
+When a final audit discovers a real gap, reopen the natural earlier owner, propagate the correction, rerun affected later checks, and return to Phase 011.
+
+Preserving a clean phase-history sequence is less important than preserving design correctness.
+
+## Orphan-detection discipline
+
+The phase must actively search for unexplained design elements and unfulfilled obligations.
+
+Examples include:
+
+- purpose without concept;
+- concept without purpose;
+- concept without a credible OP;
+- action without behavioral rationale;
+- state with no semantic role;
+- purpose-critical behavior with no action;
+- synchronization with no application justification;
+- dependency edge with no contextual rationale;
+- product variant with no purpose/scope rationale;
+- mapping rule with no conceptual source;
+- reused/familiar concept whose semantics no longer match expectations;
+- integrity or validation findings invalidated by later correction;
+- limitation or open question with no current disposition;
+- current document with no meaningful role in the knowledge graph.
+
+Material orphans block closure until corrected, removed, or legitimately bounded.
+
+## Specificity, familiarity, and integrity closure discipline
+
+Jackson's summary of the design principles makes closure failures particularly visible: purpose without concept, concept without purpose, redundant/overloaded concepts, familiar purposes solved by incompatible concepts, and concepts that fail their purposes under composition.[^jackson-integrity]
+
+[^jackson-integrity]: Daniel Jackson, "Concept Integrity," summary figure and discussion of specificity, familiarity, and integrity.
+
+Phase 011 must ensure the final design does not knowingly preserve those defects.
+
+## Open-item and limitation discipline
+
+Every material current open item must be classified before closure as:
+
+- resolved;
+- accepted limitation/non-goal;
+- bounded uncertainty compatible with closure;
+- downstream representation/architecture/engineering question whose conceptual obligation is already clear;
+- obsolete/superseded;
+- concept-design blocker requiring reopening.
+
+Closure may contain uncertainty. It may not contain disguised unfinished design.
+
+## Canonical consolidation discipline
+
+Phase 011 performs the strongest repository-wide documentation integrity review.
+
+Closure requires:
+
+- one natural current owner for durable design truth;
+- no known contradictory current authorities;
+- unambiguous supersession of retired identities/rules;
+- phase records preserved as historical evidence rather than current specification;
+- concise, current indexes;
+- meaningful internal graph links;
+- current terminology;
+- valid adopted OKF structure;
+- discoverable accepted limitations and open downstream obligations;
+- no unnecessary duplicate final summary competing with canonical owners.
+
+The repository should remain intelligible even if a reader never opens historical phase records.
+
+## Final-design discoverability discipline
+
+A closed design must have a clear progressive-disclosure path from the bundle root into current design knowledge.
+
+A reader or agent should be able to locate:
+
+- project purpose/boundaries;
+- current concepts;
+- composition/application actions;
+- scope/variants;
+- user-visible semantics;
+- material authority/lifecycle/history constraints;
+- limitations/non-goals;
+- downstream obligations/questions;
+- deeper historical evidence when needed.
+
+A monolithic final design document is optional and usually undesirable if existing canonical indexes provide a clearer graph.
+
+## Implementation-contamination discipline
+
+Current conceptual authority must not unnecessarily prescribe:
+
+- code/module/service topology;
+- schemas/storage engines;
+- APIs/protocol/message formats;
+- runtime orchestration;
+- frameworks/languages/vendors;
+- deployment/cloud infrastructure;
+- executable tests/CI/CD;
+- concrete security mechanisms;
+- implementation sequencing.
+
+Preserve required observable behavior and engineering properties while removing contingent machinery.
+
+## Downstream handoff discipline
+
+A downstream process should receive conceptual obligations, not an architecture hidden inside a handoff.
+
+The handoff may identify:
+
+- canonical design entry points;
+- in-scope variants;
+- observable behavior/application actions;
+- authority/safety/privacy constraints;
+- lifecycle/history/correction obligations;
+- user-visible mapping obligations;
+- consistency/atomicity/interoperability/security properties stated abstractly;
+- accepted limitations/non-goals;
+- validation scenarios future work must preserve;
+- unresolved engineering questions.
+
+The downstream process is then responsible for representation design, architecture, implementation planning, verification strategy, and eventual execution authorization.
 
 ## Entry criteria
 
-The preceding lifecycle has been completed sufficiently for a whole-methodology audit, and Phase 010 has left no undispositioned blocker that obviously prevents closure.
+Phase 011 may begin only when:
+
+- Phase 010 has passed or passed with closure-compatible bounded carry-forwards;
+- Phases 000–010 have no known unresolved substantive blocker;
+- one current design corpus is discoverable;
+- Phase 010 has left no known structural-integrity contradiction or uncorrected material misfit;
+- implementation remains not started;
+- `011-A` can define a responsible lifecycle-wide closure plan.
+
+If these conditions do not hold, reopen the relevant earlier phase rather than beginning closure ceremony.
 
 ## Exit criteria
 
-Phase 011 may pass only when the methodology has been completed defensibly; material gaps are closed or bounded; canonical current truth is coherent and discoverable; historical records are not competing sources of authority; implementation contamination has been removed; and the project can explain the downstream handoff and why conceptual design is ready.
+Phase 011 may close concept design only when the final project-specific closure review establishes that:
 
-## Closure state transition
-
-Until final closure passes, implementation remains not ready / not started / not authorized. After successful closure, readiness may become ready while execution remains not started; subsequent representation/architecture/implementation design work may then begin under a separate appropriate process.
+- methodology obligations are complete for the actual design;
+- material purpose-to-concept-to-behavior-to-validation traceability is discoverable;
+- material orphan/unexplained elements have been corrected or legitimately bounded;
+- current concepts have defensible purposes/OPs/specifications and sound boundaries;
+- composition, scope, mapping, familiarity, integrity, and validation are mutually coherent;
+- all material open questions are dispositioned;
+- accepted limitations/bounded uncertainty are compatible with current promises;
+- canonical current truth is coherent, progressively discoverable, and non-duplicative;
+- historical phase records are not competing current authority;
+- implementation contamination has been removed from current design authority;
+- the downstream handoff states requirements/properties without prescribing architecture;
+- implementation has not begun.
 
 ## Control structure
 
-The phase begins with a mandatory `011-A` start gate, which derives project-specific audit, reconciliation, gap-closure, and handoff subphases. The final subphase is the concept-design closure decision and lifecycle handoff.
+Phase 011 begins with:
+
+- [011-A — Closure Scope, Methodology Traceability, Canonical Reconciliation & Subphase Planning](011-a-start-gate.md).
+
+`011-A` derives only the project-specific audit, reconciliation, gap-closure, and handoff workstreams required by the actual repository.
+
+The final project-specific subphase performs the closure decision using the [Phase 011 Closure Decision Template](exit-review-template.md).
+
+The template does not prescribe the number or letters of intermediate subphases.
+
+## Closure outcomes
+
+### PASS — CONCEPT DESIGN CLOSED
+
+The lifecycle is complete and current conceptual design is fit for downstream handoff.
+
+Final state:
+
+- **Implementation readiness:** ready
+- **Implementation execution:** not started
+- **Implementation execution authorization:** not granted by this lifecycle
+
+A separate downstream representation/architecture/engineering process may begin.
+
+### PASS WITH BOUNDED CARRY-FORWARD — CONCEPT DESIGN CLOSED
+
+Permitted only when all substantive concept-design work is complete and remaining items are accepted limitations, bounded uncertainty compatible with closure, or downstream questions whose conceptual obligations are already clear.
+
+Final state is the same as `PASS`.
+
+### NOT READY TO CLOSE
+
+Material concept-design, methodology, validation, canonical-authority, traceability, handoff, or implementation-boundary gaps remain.
+
+State remains:
+
+- **Implementation readiness:** not ready
+- **Implementation execution:** not started
+- **Implementation authorization:** not yet
+
+The appropriate earlier phase/owner must be reopened and affected downstream work reassessed.
+
+## Closure state transition
+
+Until successful Phase 011 closure:
+
+- **Readiness:** not ready
+- **Execution:** not started
+- **Authorization:** not yet
+
+After successful closure:
+
+- **Readiness:** ready
+- **Execution:** not started
+- **Implementation execution authorization:** not granted by this lifecycle
+
+Phase 011 authorizes only the **handoff into a separate downstream process**. It never means implementation is underway.
