@@ -17,10 +17,16 @@ Every phase is governed by the [Phase Lifecycle Contract](../methodology/phase-l
 - [008 — Familiarity, Reuse, Genericity & Concept-Catalog Refinement](008/) — challenge unnecessary novelty and improve reuse, naming, and genericity. **Refined.**
 - [009 — Concept Integrity, Cross-Concept Coherence & Interference Audit](009/) — verify that composed concepts preserve their independent promises. **Refined.**
 - [010 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](010/) — attack the mature design with scenarios likely to expose conceptual weakness or misfit. **Refined.**
-- [011 — Methodology Completeness, Canonical Consolidation & Concept-Design Closure](011/) — perform whole-methodology completion audit and, if justified, authorize downstream design work.
+- [011 — Methodology Completeness, Canonical Consolidation & Concept-Design Closure](011/) — perform whole-methodology completion audit and, if justified, close concept design for downstream handoff. **Refined.**
 
 ## Phase control
 
 Each high-level phase begins with `NNN-A`, which reviews phase intention, incoming authority, documentation state, and dependencies before deriving only the substantive subphases required by that project. The final project-specific subphase performs consolidation, documentation-integrity review, exit decision, and handoff.
 
 The sequence above is fixed at the high level; the B–X work inside a phase is not.
+
+## Template refinement status
+
+All Base high-level phase templates `000–011` are refined. This means their methodology contracts, mandatory start gates, reusable phase-specific guidance, exit/closure reviews, documentation-governance expectations, and design-only boundaries are established.
+
+Cloned projects must still execute the lifecycle from their own `000` intake onward. Template refinement is not evidence that any cloned project's design work has already been performed.
