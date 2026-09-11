@@ -1,8 +1,8 @@
 ---
 type: Methodology Authority
 title: Concept Design Methodology Authority
-description: Defines the methodological authority and interpretation rules for the Base design lifecycle.
-tags: [methodology, concept-design, authority]
+description: Defines the methodological authority and interpretation rules for the Base concept-design lifecycle and its boundary with post-closure preparation.
+tags: [methodology, concept-design, authority, pre-implementation]
 ---
 
 # Concept Design Methodology Authority
@@ -11,7 +11,7 @@ tags: [methodology, concept-design, authority]
 
 The repository adopts Daniel Jackson's software concept design methodology, principally as developed in *The Essence of Software* and Jackson's associated concept-design materials.
 
-The methodology is used for **design**, not application implementation.
+The methodology is used for **concept design**, not application implementation.
 
 Its central concerns include:
 
@@ -29,9 +29,17 @@ Its central concerns include:
 
 Jackson does not prescribe the numbered phase lifecycle used by this repository.
 
-The `000`, `001`, `002`, ... lifecycle is therefore an **operationalization** of the methodology: a dependency-safe structure for ensuring that its design work is performed thoroughly and audibly.
+Phases `000–011` are therefore a Base **operationalization** of the methodology: a dependency-safe structure for ensuring that its concept-design work is performed thoroughly and audibly.
 
-No repository document may present the Base phase numbering as an official Jackson phase numbering.
+No repository document may present the Base phase numbering as official Jackson phase numbering.
+
+## Phase 012 boundary
+
+[Phase 012 — Pre-Implementation Audit, OKF Hardening & Agentic Development Preparation](../phases/012/) is a Base process phase **outside** Jackson's concept-design methodology.
+
+It exists only after successful Phase 011 concept-design closure to audit/polish the repository, reconcile stale/current documentation, harden OKF navigation/authority, refresh repository orientation, prepare agentic development rules, and improve the downstream engineering handoff.
+
+Phase 012 must not be described as an additional Jackson concept-design phase, and it must not begin feature implementation.
 
 ## Method over inherited process habit
 
@@ -63,7 +71,7 @@ A concept specification may define, as appropriate:
 - product-facing mappings;
 - known limitations or unresolved design questions.
 
-These are design statements. They must not be converted into implementation artifacts during the design lifecycle.
+These are design statements. They must not be converted into implementation artifacts during the concept-design lifecycle.
 
 ## Quality principles
 
@@ -79,4 +87,4 @@ Concept independence, composition, synchronization, and dependency analysis are 
 
 This document governs methodology interpretation for repositories cloned from Base unless the cloned project deliberately supersedes it with a documented methodological decision.
 
-Any such supersession must remain compatible with the design-only lifecycle invariant unless the project explicitly ceases to use Base as a concept-design process template.
+Any such supersession must remain explicit about where concept design ends, what process follows, and what implementation activity is or is not authorized.
