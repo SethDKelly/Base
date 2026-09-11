@@ -1,27 +1,27 @@
 ---
 type: Design Guardrail
 title: Design-Only Guardrails
-description: Prevents implementation work from beginning before complete concept-design closure.
-tags: [design, guardrail, implementation, readiness]
+description: Prevents implementation work from beginning before complete concept-design closure and clarifies the post-closure Phase 012 preparation boundary.
+tags: [design, guardrail, implementation, readiness, pre-implementation]
 ---
 
 # Design-Only Guardrails
 
 ## Governing invariant
 
-The Base lifecycle is design-only until the complete concept-design process has closed.
+The Base concept-design lifecycle is design-only until the complete concept-design process has closed.
 
-Before final design closure, implementation is always:
+Before successful Phase 011 closure, implementation is always:
 
-- **Readiness:** not ready
-- **Execution:** not started
-- **Authorization:** not yet
+- **Implementation readiness:** not ready
+- **Implementation execution:** not started
+- **Implementation authorization:** not yet
 
-The purpose of the design lifecycle is to reach a state in which implementation may eventually be authorized from a coherent and reviewed design. It is not itself an implementation lifecycle.
+The purpose of the concept-design lifecycle is to reach a state in which downstream engineering can be constrained by a coherent and reviewed design. It is not itself an implementation lifecycle.
 
-## Prohibited work during design
+## Prohibited work during concept design
 
-The following must not be created as executable or implementation artifacts during the design lifecycle:
+The following must not be created as executable or implementation artifacts during Phases `000–011`:
 
 - application source code;
 - production or prototype feature implementation;
@@ -69,29 +69,55 @@ For example:
 - prefer “historical references must remain resolvable” over selecting a storage engine;
 - prefer “authorization must preserve this authority boundary” over choosing an identity provider.
 
-## Readiness transition
+## Phase 011 readiness transition
 
-Only the final design-closure phase may change implementation readiness from **not ready** to **ready**.
+Only successful Phase 011 concept-design closure may change implementation readiness from **not ready** to **ready**.
 
-Even then:
+After successful closure:
 
-- implementation remains **not started**;
-- no implementation work is automatically authorized;
-- a subsequent implementation-planning or engineering process must begin separately.
+- implementation readiness may be **ready**;
+- implementation execution remains **not started**;
+- Base has not granted implementation execution authorization;
+- a separate downstream process is still required before application implementation begins.
 
-The final design handoff should therefore use the state:
+The Phase 011 handoff should therefore communicate:
 
-> **Implementation ready / not started**
+> **Implementation readiness: ready / execution: not started**
 
 and never “implementation underway,” “bootstrap complete,” or equivalent wording.
 
+## Phase 012 pre-implementation preparation
+
+Phase 012 occurs only after successful concept-design closure.
+
+It may perform:
+
+- repository/documentation audits;
+- OKF conformance and progressive-disclosure hardening;
+- stale/superseded/duplicate documentation reconciliation;
+- README and knowledge-navigation polish;
+- agentic development governance and tool-specific instruction adapters;
+- downstream implementation-handoff preparation;
+- non-executable engineering obligation/question capture.
+
+Phase 012 must **not** use “preparation” as permission to begin feature implementation, architecture bootstrap, schema/API construction, framework setup, executable test harnesses, infrastructure, or other application implementation.
+
+A successful Phase 012 exit preserves:
+
+- **Implementation readiness:** ready
+- **Implementation execution:** not started
+- **Implementation execution authorization:** not granted by Phase 012
+- **Pre-implementation preparation:** complete
+
+A separate representation/architecture/engineering process decides when implementation execution is actually authorized.
+
 ## Violation handling
 
-If implementation work is discovered during a design phase:
+If implementation work is discovered during concept design or Phase 012 preparation:
 
 1. stop extending it;
-2. classify whether the artifact contains useful design evidence;
-3. preserve only the design-relevant conclusions in the knowledge bundle;
+2. classify whether the artifact contains useful design/preparation evidence;
+3. preserve only the relevant durable conclusions in their natural knowledge owners;
 4. quarantine or remove executable implementation artifacts as appropriate;
 5. record the correction in the relevant phase history;
-6. re-evaluate whether any design conclusions were biased by the premature implementation choice.
+6. re-evaluate whether any design conclusions or preparation decisions were biased by the premature implementation choice.
