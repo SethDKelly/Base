@@ -14,7 +14,7 @@ Every phase is governed by the [Phase Lifecycle Contract](../methodology/phase-l
 - [005 — Concept Composition, Synchronization, Automation & Synergy](005/) — define explicit cross-concept behavior while preserving independence. **Refined.**
 - [006 — Concept Dependence, Product-Family, Subset & Scope Analysis](006/) — distinguish concept independence from application inclusion dependence and scope. **Refined.**
 - [007 — Concept Mapping, Interaction Semantics & User-Visible Representation](007/) — map conceptual semantics into understandable user-facing behavior without implementation. **Refined.**
-- [008 — Familiarity, Reuse, Genericity & Concept-Catalog Refinement](008/) — challenge unnecessary novelty and improve reuse, naming, and genericity.
+- [008 — Familiarity, Reuse, Genericity & Concept-Catalog Refinement](008/) — challenge unnecessary novelty and improve reuse, naming, and genericity. **Refined.**
 - [009 — Concept Integrity, Cross-Concept Coherence & Interference Audit](009/) — verify that composed concepts preserve their independent promises.
 - [010 — Scenario, Misfit, Exception, Failure & Adversarial Design Validation](010/) — attack the mature design with scenarios likely to expose conceptual weakness or misfit.
 - [011 — Methodology Completeness, Canonical Consolidation & Concept-Design Closure](011/) — perform whole-methodology completion audit and, if justified, authorize downstream design work.
